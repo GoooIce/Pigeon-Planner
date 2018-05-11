@@ -1,0 +1,69 @@
+<glade-catalog name="pigeonplannerwidgets" library="gladepython" domain="glade-3" depends="gtk+">
+  <init-function>glade_python_init</init-function>
+
+  <glade-widget-classes>
+    <glade-widget-class title="Band Entry" name="BandEntry" generic-name="bandentry">
+      <properties>
+        <property id="homogeneous" save="False" visible="False"/>
+	    <property id="size" query="False" default="2"/>
+      </properties>
+    </glade-widget-class>
+    <glade-widget-class title="Date Entry" name="DateEntry" generic-name="dateentry">
+      <properties>
+        <property id="shadow-type" save="False" visible="False"/>
+        <property id="hadjustment" save="False" visible="False"/>
+        <property id="vadjustment" save="False" visible="False"/>
+        <property id="editable" name="Editable" default="False"/>
+        <property id="clear" name="Clear" default="False"/>
+      </properties>
+    </glade-widget-class>
+    <glade-widget-class title="Display Check" name="DisplayCheckButton" generic-name="displaycheck">
+    </glade-widget-class>
+    <glade-widget-class title="Sex Combobox" name="SexCombobox" generic-name="sexcombo">
+    </glade-widget-class>
+    <glade-widget-class title="Status Combobox" name="StatusCombobox" generic-name="statuscombo">
+    </glade-widget-class>
+    <glade-widget-class title="Operator Combobox" name="OperatorCombobox" generic-name="operatorcombo">
+    </glade-widget-class>
+    <glade-widget-class title="Data Combobox Entry" name="DataComboboxEntry" generic-name="datacomboentry">
+      <properties>
+        <property id="text-column" save="False" visible="False"/>
+        <property id="model" save="False" visible="False"/>
+      </properties>
+    </glade-widget-class>
+    <glade-widget-class title="Distance Combobox" name="DistanceCombobox" generic-name="distancecombo">
+    </glade-widget-class>
+    <glade-widget-class title="Speed Combobox" name="SpeedCombobox" generic-name="speedcombo">
+    </glade-widget-class>
+    <glade-widget-class title="LatLong Entry" name="LatLongEntry" generic-name="latlongentry">
+      <properties>
+        <property id="shadow-type" save="False" visible="False"/>
+        <property id="hadjustment" save="False" visible="False"/>
+        <property id="vadjustment" save="False" visible="False"/>
+      </properties>
+    </glade-widget-class>
+    <glade-widget-class title="Sex Entry" name="SexEntry" generic-name="sexentry">
+    </glade-widget-class>
+    <glade-widget-class title="Statusbar" name="StatusBar" generic-name="statusbar">
+      <properties>
+        <property id="size" query="False" default="0" visible="False" />
+      </properties>
+    </glade-widget-class>
+  </glade-widget-classes>
+
+  <glade-widget-group name="pigeonplanner" title="Pigeon Planner">
+    <glade-widget-class-ref name="BandEntry"/>
+    <glade-widget-class-ref name="DateEntry"/>
+    <glade-widget-class-ref name="DisplayCheckButton"/>
+    <glade-widget-class-ref name="SexCombobox"/>
+    <glade-widget-class-ref name="StatusCombobox"/>
+    <glade-widget-class-ref name="OperatorCombobox"/>
+    <glade-widget-class-ref name="DataComboboxEntry"/>
+    <glade-widget-class-ref name="DistanceCombobox"/>
+    <glade-widget-class-ref name="SpeedCombobox"/>
+    <glade-widget-class-ref name="LatLongEntry"/>
+    <glade-widget-class-ref name="SexEntry"/>
+    <glade-widget-class-ref name="StatusBar"/>
+  </glade-widget-group>
+
+</glade-catalog>

@@ -1,0 +1,12 @@
+----------------------------------------------------------------------------
+HET LOKAAL                   LOCATION               DATA TECHNOLOGY-DEERLIJK
+----------------------------------------------------------------------------
+CHIMAY                 25-05-13 247 JONGE          LOS TE-LACHES A : 10.00     
+----------------------------------------------------------------------------
+ NR NAAM                  GEMEENTE AD IG AFSTAND RING   JR BESTAT   SNELH.  
+ NO NOM                   LOCALITE EN MQ DISTANC BAGUE  AN CONSTAT  VITESSE 
+----------------------------------------------------------------------------
+  1 SOME NAME             LOCATION 10  2  123588 123456713 121828.0 1397,00 
+  2 SOME NAME             LOCATION 10  1       2 999999913 122103.0 1372,55 
+  3 SOME NAME             LOCATION 10  3       3 123456813 122015.0 1369,40 
+  4 SOME NAME             LOCATION 10  4       4 999999913 122200.0 1366,38

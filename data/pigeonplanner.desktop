@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pigeon Planner
+Comment=Organise and manage your pigeons
+Comment[nl]=Organiseer en beheer uw duiven
+Terminal=false
+TryExec=pigeonplanner
+Exec=pigeonplanner
+Icon=pigeonplanner
+Categories=GTK;Office;
+Encoding=UTF-8
+StartupNotify=true

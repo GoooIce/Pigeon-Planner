@@ -1,0 +1,144 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<app-bundle>
+
+  <meta>
+    <prefix name="default">${env:JHBUILD_PREFIX}</prefix>
+    <destination overwrite="yes">${project}</destination>
+    <run-install-name-tool/>
+    <launcher-script>${project}/pigeonplanner.launcher</launcher-script >
+  </meta>
+
+  <plist>${project}/Info.plist</plist>
+  <!-- We have to have this, but the result is ignored. -->
+ <main-binary>
+     ${prefix}/bin/pigeonplanner
+  </main-binary>
+
+  <!-- We need to pack our own Python to avoid compatibility problems. -->
+  <binary dest="${bundle}/Contents/MacOS">
+    ${prefix}/bin/python
+  </binary>
+
+  <!-- Copy in GTK+ modules. Note the use of the
+       "${pkg:module:variable}" macro, which evaluates to a pkg-config
+       variable in the specified module. Note that any libraries that
+       binaries link to are also copied in automatically.
+  -->
+  <binary>
+    ${prefix}/lib/gdk-pixbuf-2.0/${pkg:gdk-pixbuf-2.0:gdk_pixbuf_binary_version}/
+  </binary>
+
+  <!-- Copy in the theme engines. -->
+  <binary>
+    ${prefix}/lib/gtk-2.0/${pkg:gtk+-2.0:gtk_binary_version}/engines/*.so
+  </binary>
+
+  <!-- And the print backends -->
+  <binary>
+    ${prefix}/lib/gtk-2.0/${pkg:gtk+-2.0:gtk_binary_version}/printbackends/*.so
+  </binary>
+
+  <data dest="${bundle}/Contents/Resources/share/mime">
+    ${prefix}/share/mime
+  </data>
+
+  <!-- Not working anymore in newer versions
+  <binary>
+    ${prefix}/lib/pango/${pkg:pango:pango_module_version}/modules/
+  </binary>
+  -->
+
+  <binary>
+    ${prefix}/lib/libpython2.7.dylib
+  </binary>
+
+  <!-- Copy in libpyglib, which will pull in other dependencies we need -->
+  <binary>
+    ${prefix}/lib/libpyglib-2.0-python.0.dylib
+  </binary>
+
+  <binary recurse="True">
+    ${prefix}/lib/python2.7/*.so
+  </binary>
+
+  <binary>
+    ${prefix}/lib/librsvg-2.2.dylib
+  </binary>
+
+  <binary>
+    ${prefix}/lib/libgtkmacintegration-gtk2.2.dylib
+  </binary>
+
+  <binary>
+     ${prefix}/lib/libgettextpo.0.dylib
+  </binary>
+
+  <binary>
+    ${prefix}/lib/libtiff.5.dylib
+  </binary>
+
+  <!-- Translation filenames, one for each program or library that you
+       want to copy in to the bundle. The "dest" attribute is
+       optional, as usual. Bundler will find all translations of that
+       library/program under the indicated directory and copy them.-->
+  <translations name="gtk20">
+    ${prefix}/share/locale
+  </translations>
+
+  <!--  
+  <translations  name="pigeonplanner">
+    ${prefix}/share/locale
+  </translations>
+  -->
+
+  <!-- We have to pull in the python modules, which are mixed python
+       and loadable modules.  -->
+  <data recurse="True">
+    ${prefix}/lib/python2.7/*.py
+  </data>
+
+  <!-- Make sure to get all data from our installed packages -->
+  <data recurse="True">
+    ${prefix}/lib/python2.7/site-packages/
+  </data>
+
+  <data>
+    ${prefix}/lib/python2.7/config/
+  </data>
+
+  <data>
+    ${prefix}/include/python2.7/pyconfig.h
+  </data>
+
+<!--TODO: This doesn't work anymore with a recent build-->
+<!--  <data>-->
+<!--    ${prefix}/etc/pango/-->
+<!--  </data>-->
+
+  <!-- Copy in the themes data. You may want to trim this to save space
+       in your bundle. -->
+  <data>
+    ${prefix}/share/themes/Clearlooks
+  </data>
+
+  <data>
+    ${prefix}/share/themes/Mac<!-- required for stock accelerators cmd-X etc... -->
+  </data>
+
+  <!-- Copy icons. Note that the .icns file is an Apple format which
+       contains up to 4 sizes of icon. You can use
+       /Developer/Applications/Utilities/Icon Composer.app to import
+       artwork and create the file.-->
+  <data dest="${bundle}/Contents/Resources">
+    ${project}/pigeonplanner.icns
+  </data>
+
+  <!-- This is where theme commands go. You can copy them in from your
+       theme of choice if they provide and example, or you can just
+       change the source path. -->
+
+  <data dest="${bundle}/Contents/Resources/etc/gtk-2.0/gtkrc">
+    ${project}/gtkrc
+  </data>
+
+</app-bundle>

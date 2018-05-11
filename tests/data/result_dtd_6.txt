@@ -1,0 +1,12 @@
+HET LOKAAL                  LOCATION                   DATA TECHNOLOGY-DEERLIJK                
+------------------------------------------------------------------------------------------- 
+LA SOUTERRAINE           25-05-13 66 JONGEN        LOS TE-LACHES A : 09.30                      
+------------------------------------------------------------------------------------------- 
+ NR            NAAM                  GEMEENTE AD IG AFSTAND RING   JR BESTAT   SNELH.   NR  
+ NO            NOM                   LOCALITE EN MQ DISTANC BAGUE  AN CONSTAT  VITESSE  NO  
+------------------------------------------------------------------------------------------- 
+   1 110450-64 SOME NAME             LOCATION 35  7  609383 999999913 170711.0 1332,91    1 
+   2 110450-64 SOME NAME             LOCATION 35 18       2 123456713 170711.0 1332,91    2 
+   3 110450-64 SOME NAME             LOCATION 35 29       3 123456813 171555.0 1307,92    3 
+   4 110450-64 SOME NAME             LOCATION 35 10       4 999999913 172642.0 1278,34    4
+

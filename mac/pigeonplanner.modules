@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<moduleset>
+    <repository type="git" name="github.com"
+        href="git://github.com/"/>
+
+    <metamodule id="pigeonplanner">
+        <dependencies>
+            <dep package="gtk-mac-bundler"/>
+            <dep package="pigeonplanner-python-deps"/>
+        </dependencies>
+    </metamodule>
+
+    <autotools id="gtk-mac-bundler" autogen-template="echo no configure">
+        <branch repo="github.com" module="jralls/gtk-mac-bundler.git"/>
+    </autotools>
+
+    <metamodule id="pigeonplanner-python-deps">
+        <dependencies>
+            <dep package="setuptools"/>
+            <dep package="geopy"/>
+            <dep package="yapsy"/>
+        </dependencies>
+    </metamodule>
+    <repository type="tarball" name="pypi"
+        href="http://pypi.python.org/packages/source/"/>
+    <distutils id="setuptools">
+        <branch repo="pypi" version="1.1.3"
+            module="s/setuptools/setuptools-1.1.3.tar.gz"/>
+    </distutils>
+    <distutils id="geopy">
+        <branch repo="pypi" version="0.95.1"
+            module="g/geopy/geopy-0.95.1.tar.gz"/>
+    </distutils>
+    <distutils id="yapsy">
+        <branch repo="pypi" version="1.10.2-pythons2n3"
+            module="Y/Yapsy/Yapsy-1.10.2-pythons2n3.tar.gz"/>
+    </distutils>
+</moduleset>

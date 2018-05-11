@@ -1,0 +1,2486 @@
+# Russian translations for Pigeon Planner package.
+# Copyright (C) 2009 Alexey Bogdanov
+# This file is distributed under the same license as the Pigeon Planner package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pigeon Planner 0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-10 22:39+0200\n"
+"PO-Revision-Date: 2016-01-01 21:38+0000\n"
+"Last-Translator: Viktor Kosenko <ksviktor@gmail.com>\n"
+"Language-Team: none <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-01-02 05:11+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
+"Language: \n"
+
+#: pigeonplanner/messages.py:19 pigeonplanner/ui/pedigreewindow.py:213
+#: pigeonplanner/ui/resultwindow.py:771 pigeonplanner/ui/exportwindow.py:56
+#: pigeonplanner/ui/tools/distancecalculator.py:72
+#: pigeonplanner/core/common.py:238 pigeonplanner/core/common.py:245
+msgid "Error"
+msgstr "Помилка"
+
+#: pigeonplanner/messages.py:20
+msgid "Warning"
+msgstr "Застереження"
+
+#: pigeonplanner/messages.py:23
+msgid "Pigeon Planner is already running."
+msgstr "Pigeon Planner вже запущений"
+
+#: pigeonplanner/messages.py:27
+msgid ""
+"The database you are trying to open is too new for your version of Pigeon "
+"Planner. You need to reinstall the latest version to continue."
+msgstr ""
+"База даних, яку ви намагаєтеся відкрити занадто нова для вашої версії Pigeon "
+"Planner. Ви повинні встановити останню версію, щоб продовжити."
+
+#: pigeonplanner/messages.py:32
+msgid "Database update required!"
+msgstr "Потрібно оновити бази!"
+
+#: pigeonplanner/messages.py:33
+msgid ""
+"This database needs an update before it can be used. Previous versions of "
+"Pigeon Planner won't work anymore. Do you want to continue?"
+msgstr ""
+"Ця база даних перед використанням потребує оновлення. Попередні версії "
+"Pigeon Planner більше не будуть працювати. Ви хочете продовжити?"
+
+#: pigeonplanner/messages.py:38
+msgid ""
+"The Pigeon Planner databases has been updated to match the current version. "
+"Note that it is not advised to run an older version, which can lead to data "
+"corruption."
+msgstr ""
+"Бази даних Голуб Planner було оновлено відповідно до поточної версією. "
+"Зверніть увагу, що не рекомендується запускати старі версії, які можуть "
+"призвести до пошкодження даних."
+
+#: pigeonplanner/messages.py:44
+msgid ""
+"The database migration has failed! Any further actions are stopped to "
+"prevent data loss. Please contact the developers to fix this problem."
+msgstr ""
+"Переміщення бази даних не вдалося! Будь-які подальші дії будуть зупинені, "
+"щоб запобігти втраті даних. Будь ласка, зв'яжіться з розробниками, щоб "
+"виправити цю проблему."
+
+#: pigeonplanner/messages.py:50 pigeonplanner/messages.py:53
+msgid "Removing database"
+msgstr "Видалення бази даних"
+
+#: pigeonplanner/messages.py:51
+msgid "Are you sure you want to remove the database? All data will be lost."
+msgstr ""
+"Ви впевнені, що хочете видалити базу даних? Всі дані будуть втрачені!"
+
+#: pigeonplanner/messages.py:55
+#, python-format
+msgid "Notification for '%s'"
+msgstr "Повідомлення для '%s'"
+
+#: pigeonplanner/messages.py:56
+msgid "Go to the calendar?"
+msgstr "Перейти до календаря?"
+
+#: pigeonplanner/messages.py:59
+msgid "Invalid image!"
+msgstr "Неправильний файл зображення!"
+
+#: pigeonplanner/messages.py:60
+msgid ""
+"This image is either not supported or corrupt, please choose another one."
+msgstr ""
+"Формат зображення не підтримується або файл пошкоджений. Виберіть інший."
+
+#: pigeonplanner/messages.py:63
+msgid "Loading image failed!"
+msgstr "Помилка завантаження зображення!"
+
+#: pigeonplanner/messages.py:64
+msgid "Maybe you have renamed the image or moved it on your disk."
+msgstr "Можливо ви перейменували або перемістили файл."
+
+#: pigeonplanner/messages.py:67
+msgid ""
+"This pigeon already exists, but isn't showing. Do you want to show it again?"
+msgstr ""
+"Такий голуб вже існує, але він не показаний. Хочете показати його знову?"
+
+#: pigeonplanner/messages.py:71
+msgid "This pigeon already exists. Overwrite it?"
+msgstr "Такий голуб вже існує. Перезаписати його?"
+
+#: pigeonplanner/messages.py:74
+msgid "This pigeon already exists."
+msgstr "Цей голуб вже існує."
+
+#: pigeonplanner/messages.py:77
+msgid "This pigeon doesn't exist. Do you want to add it?"
+msgstr "Цей голуб не існує. Хочете додати його?"
+
+#: pigeonplanner/messages.py:79
+msgid "Adding pigeon"
+msgstr "Додавання голуба"
+
+#: pigeonplanner/messages.py:80
+msgid "The selected pigeon can't be found."
+msgstr "Обраний голуб не знайдено."
+
+#: pigeonplanner/messages.py:82
+msgid "Not found!"
+msgstr "Не знайдено!"
+
+#: pigeonplanner/messages.py:83
+msgid "Can't search for parents, enter the pigeon band first."
+msgstr "Не можу знайти батьків, введіть голуба в першу чергу."
+
+#: pigeonplanner/messages.py:87 pigeonplanner/messages.py:90
+#: pigeonplanner/messages.py:93 pigeonplanner/messages.py:96
+#: pigeonplanner/messages.py:100 pigeonplanner/messages.py:103
+#: pigeonplanner/messages.py:107 pigeonplanner/messages.py:117
+#: pigeonplanner/messages.py:120 pigeonplanner/ui/exportwindow.py:56
+msgid "Invalid input!"
+msgstr "Невірне введення!"
+
+#: pigeonplanner/messages.py:88
+msgid "The ringnumber and year are necessary."
+msgstr "Номер кільця і рік повинні бути вказані"
+
+#: pigeonplanner/messages.py:91
+msgid "Only numbers are accepted as year input."
+msgstr "У полі введення року допускаються тільки цифри."
+
+#: pigeonplanner/messages.py:94
+msgid "Check the length of the year."
+msgstr "Перевірте коректність введеного року"
+
+#: pigeonplanner/messages.py:97
+msgid "Only numbers are allowed when adding multiple pigeons."
+msgstr "У полі введення номера кільця допустимі тільки цифри"
+
+#: pigeonplanner/messages.py:101
+msgid "At least the date and racepoint have to be entered."
+msgstr "Дата і позиція в гонці повинні бути введені."
+
+#: pigeonplanner/messages.py:104
+msgid ""
+"The date you entered has the wrong format. It should be ISO-format (YYYY-MM-"
+"DD)."
+msgstr ""
+"Ви ввели дату в неправильному форматі. Потрібно використовувати ISO формат "
+"РРРР-ММ-ДД"
+
+#: pigeonplanner/messages.py:108
+msgid "The result you want to add already exists."
+msgstr "Результат, який ви хочете додати вже існує."
+
+#: pigeonplanner/messages.py:110
+msgid "Removing the selected result"
+msgstr "Видалення вибраного результату."
+
+#: pigeonplanner/messages.py:111 pigeonplanner/messages.py:114
+#: pigeonplanner/messages.py:158 pigeonplanner/ui/dialogs.py:223
+#: glade/MainWindow.ui:1119
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+#: pigeonplanner/messages.py:113
+msgid "Removing the selected media file"
+msgstr "Видалення обраного медіа файлу"
+
+#: pigeonplanner/messages.py:118
+msgid "The name has to be entered."
+msgstr "Ім'я повинно бути введено."
+
+#: pigeonplanner/messages.py:121
+msgid "The persoon you want to add already exists."
+msgstr "Ця персона вже зареєстрована."
+
+#: pigeonplanner/messages.py:123
+#, python-format
+msgid "Removing '%s'"
+msgstr "Видалення '%s'"
+
+#: pigeonplanner/messages.py:124
+msgid "Are you sure you want to remove this person from your addresses?"
+msgstr "Ви впевнені, що хочете видалити цю персону з ваших адрес?"
+
+#: pigeonplanner/messages.py:128
+#, python-format
+msgid "Removing '%s' from '%s'."
+msgstr "Видалення  '%s' з '%s'."
+
+#: pigeonplanner/messages.py:129
+msgid "Are you sure you want to remove this item?"
+msgstr "Ви впевнені, що хочете видалити це?"
+
+#: pigeonplanner/messages.py:132
+msgid "The backup was successfully created."
+msgstr "Резервна копія успішно створена."
+
+#: pigeonplanner/messages.py:134 pigeonplanner/messages.py:140
+msgid "Completed!"
+msgstr "Завершено!"
+
+#: pigeonplanner/messages.py:135
+msgid "There was an error making the backup."
+msgstr "При створенні резервної копії сталася помилка."
+
+#: pigeonplanner/messages.py:137 pigeonplanner/messages.py:143
+msgid "Failed!"
+msgstr "Не вдалося!"
+
+#: pigeonplanner/messages.py:138
+msgid "The backup was successfully restored."
+msgstr "Резервне копіювання було успішно відновлено."
+
+#: pigeonplanner/messages.py:139
+msgid "The program will now quit automaticly."
+msgstr "Програма завершить роботу автоматично."
+
+#: pigeonplanner/messages.py:141
+msgid "There was an error restoring the backup."
+msgstr "Сталася помилка при відновленні резервної копії."
+
+#: pigeonplanner/messages.py:145
+msgid "No personal information found."
+msgstr "Персональна інформація не знайдена."
+
+#: pigeonplanner/messages.py:146
+msgid ""
+"This will be shown on top of the printed pedigree.\n"
+"Do you want to add it now?"
+msgstr ""
+"Це буде показано на початку друкованої діаграми.\n"
+" Додати?"
+
+#: pigeonplanner/messages.py:150
+msgid "Error printing the pedigree"
+msgstr "Помилка друку родоводу"
+
+#: pigeonplanner/messages.py:153
+msgid "An error occured in the print operation!"
+msgstr "Сталася помилка в операції друку!"
+
+#: pigeonplanner/messages.py:154
+msgid "See the logfile (File->Logfile viewer) for more info."
+msgstr "Дивіться лог-файл (File->Logfile viewer) для додаткової інформації."
+
+#: pigeonplanner/messages.py:157
+msgid "This will set back all the settings to the default values."
+msgstr "Це поверне всі налаштування до параметрів за замовчуванням."
+
+#: pigeonplanner/messages.py:159
+msgid "Default settings"
+msgstr "Параметри за замовчуванням"
+
+#: pigeonplanner/messages.py:161
+msgid "Pigeon Planner needs to be restarted for the changes to take effect."
+msgstr "Зміни вступлять в силу після перезапуску."
+
+#: pigeonplanner/messages.py:164
+msgid "Restart required"
+msgstr "Необхідне перезавантаження"
+
+#: pigeonplanner/messages.py:166
+msgid "Update available!"
+msgstr "Доступне оновлення!"
+
+#: pigeonplanner/messages.py:167
+msgid "There is an update available, do you want to download it now?"
+msgstr "Доступне оновлення програми, скачати його прямо зараз?"
+
+#: pigeonplanner/messages.py:170
+msgid "The recipient and sender's e-mailaddress are required."
+msgstr "Потрібна e-mail address одержувача і відправника."
+
+#: pigeonplanner/messages.py:174
+msgid "Error trying to get information. Are you connected to the internet?"
+msgstr "Помилка при отриманні інформації. Ви підключені до Інтернет?"
+
+#: pigeonplanner/messages.py:175
+msgid "A new version is available."
+msgstr "Доступна нова версія."
+
+#: pigeonplanner/messages.py:176
+msgid "You already have the latest version installed."
+msgstr "У вас встановлена остання версія."
+
+#: pigeonplanner/messages.py:177
+msgid "This isn't normal, or you must be running a development version"
+msgstr "Це не нормально, або можливо ви використовуєте нестабільну версію."
+
+#: pigeonplanner/reports/pigeons.py:40 pigeonplanner/reports/results.py:63
+#: pigeonplanner/ui/resultwindow.py:87 pigeonplanner/ui/dialogs.py:256
+#: pigeonplanner/ui/tabs/results.py:59 pigeonplanner/ui/tabs/relatives.py:163
+#: pigeonplanner/ui/widgets/treeview.py:283 glade/BreedingView.ui:140
+#: glade/BreedingView.ui:337 glade/BreedingView.ui:1087
+#: glade/BreedingView.ui:1255 glade/ResultParser.ui:574
+msgid "Band no."
+msgstr "Кільце"
+
+#: pigeonplanner/reports/pigeons.py:43 pigeonplanner/ui/tabs/relatives.py:182
+#: pigeonplanner/ui/widgets/treeview.py:283 glade/MainWindow.ui:826
+#: glade/FilterDialog.ui:121 glade/OptionsDialog.ui:909
+#: glade/OptionsDialog.ui:1562 glade/DetailsView.ui:238
+#: glade/DetailsView.ui:653
+msgid "Sex"
+msgstr "Стать"
+
+#: pigeonplanner/reports/pigeons.py:45 pigeonplanner/ui/dbmanager.py:47
+#: pigeonplanner/ui/dialogs.py:256 pigeonplanner/ui/widgets/treeview.py:283
+#: glade/OptionsDialog.ui:844 glade/OptionsDialog.ui:1285
+#: glade/OptionsDialog.ui:1540 glade/DBManager.ui:364 glade/AddressBook.ui:129
+msgid "Name"
+msgstr "Ім'я"
+
+#: pigeonplanner/reports/pigeons.py:47
+#: pigeonplanner/ui/widgets/treeview.py:283 glade/FilterDialog.ui:135
+#: glade/OptionsDialog.ui:868 glade/OptionsDialog.ui:1549
+#: glade/DetailsView.ui:227 glade/DetailsView.ui:642
+msgid "Colour"
+msgstr "Колір"
+
+#: pigeonplanner/reports/pigeons.py:49
+#: pigeonplanner/ui/widgets/treeview.py:284
+#: pigeonplanner/ui/tools/distancecalculator.py:174 glade/FilterDialog.ui:163
+#: glade/OptionsDialog.ui:881 glade/DetailsView.ui:201
+#: glade/DetailsView.ui:576 glade/MedicationView.ui:871
+msgid "Loft"
+msgstr "Голубник"
+
+#: pigeonplanner/reports/pigeons.py:51
+#: pigeonplanner/ui/widgets/treeview.py:284 glade/FilterDialog.ui:149
+#: glade/OptionsDialog.ui:853 glade/DetailsView.ui:251
+#: glade/DetailsView.ui:666
+msgid "Strain"
+msgstr "Раса"
+
+#: pigeonplanner/reports/pigeons.py:53
+#: pigeonplanner/ui/widgets/treeview.py:284 glade/FilterDialog.ui:332
+#: glade/OptionsDialog.ui:894
+msgid "Status"
+msgstr "Стан"
+
+#: pigeonplanner/reports/results.py:61 pigeonplanner/reports/velocity.py:39
+#: pigeonplanner/ui/resultwindow.py:80 pigeonplanner/ui/tabs/results.py:52
+#: glade/ResultWindow.ui:178 glade/DetailsView.ui:1182
+#: glade/DetailsView.ui:1282 glade/DetailsView.ui:1397
+#: glade/MedicationView.ui:36 glade/MedicationView.ui:123
+#: glade/ResultParser.ui:170
+msgid "Date"
+msgstr "Дата"
+
+#: pigeonplanner/reports/results.py:62 pigeonplanner/ui/resultwindow.py:81
+#: pigeonplanner/ui/tabs/results.py:53 glade/VelocityCalculator.ui:154
+#: glade/ResultWindow.ui:190 glade/DetailsView.ui:1441
+#: glade/ResultParser.ui:182 glade/RaceManager.ui:132
+msgid "Racepoint"
+msgstr "Місце випуску"
+
+#: pigeonplanner/reports/results.py:64 pigeonplanner/ui/resultwindow.py:89
+#: pigeonplanner/ui/resultwindow.py:90 pigeonplanner/ui/tabs/results.py:61
+#: pigeonplanner/ui/tabs/results.py:62 glade/ResultsView.ui:532
+#: glade/ResultWindow.ui:448
+msgid "Placed"
+msgstr "Місце"
+
+#: pigeonplanner/reports/results.py:65 pigeonplanner/ui/resultwindow.py:91
+#: pigeonplanner/ui/tabs/results.py:63 glade/ResultsView.ui:605
+#: glade/ResultWindow.ui:462
+msgid "Out of"
+msgstr "З"
+
+#: pigeonplanner/reports/results.py:66 pigeonplanner/ui/resultwindow.py:82
+#: pigeonplanner/ui/tabs/results.py:54 glade/ResultsView.ui:352
+#: glade/OptionsDialog.ui:1051 glade/ResultWindow.ui:204
+#: glade/ExportWindow.ui:126 glade/ResultParser.ui:328
+msgid "Type"
+msgstr "Тип"
+
+#: pigeonplanner/reports/results.py:67 pigeonplanner/ui/resultwindow.py:83
+#: pigeonplanner/ui/tabs/results.py:55
+#: pigeonplanner/ui/tools/datamanager.py:45 glade/ResultsView.ui:303
+#: glade/OptionsDialog.ui:1103 glade/ResultWindow.ui:218
+#: glade/ResultParser.ui:342
+msgid "Wind"
+msgstr "Вітер"
+
+#: pigeonplanner/reports/results.py:68 pigeonplanner/ui/resultwindow.py:85
+#: pigeonplanner/ui/tabs/results.py:57
+#: pigeonplanner/ui/tools/datamanager.py:44 glade/ResultsView.ui:289
+#: glade/OptionsDialog.ui:1060 glade/ResultWindow.ui:232
+#: glade/ResultParser.ui:356
+msgid "Weather"
+msgstr "Погода"
+
+#: pigeonplanner/reports/results.py:69
+msgid "Coef."
+msgstr "Коэф."
+
+#: pigeonplanner/reports/results.py:70 pigeonplanner/ui/resultwindow.py:96
+#: pigeonplanner/ui/tabs/results.py:68 glade/ResultsView.ui:249
+#: glade/OptionsDialog.ui:1036 glade/ResultWindow.ui:490
+#: glade/ResultParser.ui:196
+msgid "Sector"
+msgstr "Сектор"
+
+#: pigeonplanner/reports/results.py:71 pigeonplanner/ui/resultwindow.py:97
+#: pigeonplanner/ui/tabs/results.py:69 glade/ResultsView.ui:366
+#: glade/OptionsDialog.ui:1088 glade/ResultWindow.ui:504
+#: glade/ResultParser.ui:210
+msgid "Category"
+msgstr "Категорія"
+
+#: pigeonplanner/reports/results.py:72 pigeonplanner/ui/resultwindow.py:98
+#: pigeonplanner/ui/tabs/results.py:70 glade/ResultsView.ui:317
+#: glade/BreedingView.ui:578 glade/BreedingView.ui:935
+#: glade/OptionsDialog.ui:1073 glade/MedicationView.ui:417
+#: glade/MedicationView.ui:775 glade/AddressBook.ui:413
+msgid "Comment"
+msgstr "Коментарі"
+
+#: pigeonplanner/reports/velocity.py:35 pigeonplanner/reports/velocity.py:46
+#: glade/VelocityCalculator.ui:341 glade/VelocityCalculator.ui:661
+#: glade/VelocityCalculator.ui:1125
+msgid "Velocity"
+msgstr "Швидкість"
+
+#: pigeonplanner/reports/velocity.py:40 glade/VelocityCalculator.ui:700
+msgid "Released"
+msgstr "Випущений"
+
+#: pigeonplanner/reports/velocity.py:41 glade/VelocityCalculator.ui:166
+#: glade/VelocityCalculator.ui:315 glade/VelocityCalculator.ui:685
+#: glade/DistanceCalculator.ui:369 glade/RaceManager.ui:191
+msgid "Distance"
+msgstr "Відстань"
+
+#: pigeonplanner/reports/velocity.py:47 glade/VelocityCalculator.ui:1136
+msgid "Flight Time"
+msgstr "Час польоту"
+
+#: pigeonplanner/reports/velocity.py:48 glade/VelocityCalculator.ui:1147
+msgid "Time of Arrival"
+msgstr "Час прибуття"
+
+#: pigeonplanner/reports/pedigrees/swapped_details.py:50
+#: pigeonplanner/reports/pedigrees/original.py:64
+#: pigeonplanner/reports/pedigrees/middle.py:43
+msgid "Pedigree of:"
+msgstr "Родовід"
+
+#: pigeonplanner/ui/filechooser.py:53
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+#: pigeonplanner/ui/filechooser.py:78 pigeonplanner/ui/tabs/media.py:110
+msgid "Images"
+msgstr "Зображення"
+
+#: pigeonplanner/ui/filechooser.py:140
+msgid "Select an image..."
+msgstr "Виберіть зображення ..."
+
+#: pigeonplanner/ui/filechooser.py:143
+msgid "No image"
+msgstr "Немає зображення"
+
+#: pigeonplanner/ui/filechooser.py:155 pigeonplanner/ui/filechooser.py:235
+#: pigeonplanner/ui/filechooser.py:265
+msgid "Select a file..."
+msgstr "Виберіть файл ..."
+
+#: pigeonplanner/ui/filechooser.py:165
+msgid "Title"
+msgstr "Назва"
+
+#: pigeonplanner/ui/filechooser.py:169 pigeonplanner/ui/dbmanager.py:51
+#: glade/DBManager.ui:375 glade/MedicationView.ui:50
+#: glade/MedicationView.ui:226 glade/MedicationView.ui:719
+msgid "Description"
+msgstr "Опис"
+
+#: pigeonplanner/ui/filechooser.py:200 pigeonplanner/ui/filechooser.py:213
+msgid "Save as..."
+msgstr "Зберегти як..."
+
+#: pigeonplanner/ui/filechooser.py:256
+msgid "Select a folder..."
+msgstr "Виберіть папку ..."
+
+#: pigeonplanner/ui/optionsdialog.py:53 glade/BreedingView.ui:597
+#: glade/BreedingView.ui:954 glade/OptionsDialog.ui:1696
+#: glade/OptionsDialog.ui:1782 glade/OptionsDialog.ui:1929
+#: glade/DBManager.ui:423
+msgid "General"
+msgstr "Загальне"
+
+#: pigeonplanner/ui/optionsdialog.py:55
+msgid "Appearance"
+msgstr "Зовнішність"
+
+#: pigeonplanner/ui/optionsdialog.py:57
+msgid "Columns"
+msgstr "Стовпці"
+
+#: pigeonplanner/ui/optionsdialog.py:59
+msgid "Printing"
+msgstr "Друк"
+
+#: pigeonplanner/ui/optionsdialog.py:60 pigeonplanner/ui/gtkmain.py:57
+#: pigeonplanner/ui/pedigreewindow.py:69 pigeonplanner/ui/pedigreewindow.py:77
+#: pigeonplanner/ui/tabs/pedigree.py:28
+msgid "Pedigree"
+msgstr "Родовід"
+
+#: pigeonplanner/ui/optionsdialog.py:61 pigeonplanner/ui/tabs/results.py:646
+#: glade/MainWindow.ui:293 glade/ExportWindow.ui:254 glade/ResultParser.ui:224
+msgid "Pigeons"
+msgstr "Голуби"
+
+#: pigeonplanner/ui/optionsdialog.py:62 pigeonplanner/ui/resultwindow.py:228
+#: pigeonplanner/ui/resultwindow.py:416 pigeonplanner/ui/resultwindow.py:578
+#: pigeonplanner/ui/tabs/results.py:538 glade/ResultsView.ui:135
+#: glade/ResultWindow.ui:777
+msgid "Results"
+msgstr "Результати"
+
+#: pigeonplanner/ui/optionsdialog.py:64 glade/DBManager.ui:531
+msgid "Advanced"
+msgstr "Розширені"
+
+#: pigeonplanner/ui/optionsdialog.py:112
+msgid "day"
+msgstr "день"
+
+#: pigeonplanner/ui/optionsdialog.py:112
+msgid "days"
+msgstr "дні(в)"
+
+#: pigeonplanner/ui/exceptiondialog.py:46
+msgid ""
+"Chances are that your problem is already fixed in this new version. Send a "
+"report anyway?"
+msgstr ""
+"Швидше за все, ваша проблема вже виправлена ​​в новій версії. Відправити "
+"звіт або інше?"
+
+#: pigeonplanner/ui/exceptiondialog.py:72
+msgid "Pigeon Planner has experienced an unexpected error"
+msgstr "Pigeon Planner - виникла непередбачувана помилка"
+
+#: pigeonplanner/ui/exceptiondialog.py:80
+msgid ""
+"You can help the Pigeon Planner developers by taking the time to report this "
+"bug."
+msgstr ""
+"Ви можете допомогти розробникам Pigeon Planner, якщо знайдете час, щоб "
+"рапортувати про цю помилку."
+
+#: pigeonplanner/ui/exceptiondialog.py:98
+msgid "Error Detail"
+msgstr "Деталі помилки."
+
+#: pigeonplanner/ui/gtkmain.py:58 glade/OptionsDialog.ui:1320
+#: glade/Dialogs.ui:8 glade/AddressBook.ui:372
+msgid "E-mail"
+msgstr "Електронна пошта"
+
+#: pigeonplanner/ui/gtkmain.py:59
+msgid "Send"
+msgstr "Відправити"
+
+#: pigeonplanner/ui/gtkmain.py:60
+msgid "Report"
+msgstr "Звіт"
+
+#: pigeonplanner/ui/pedigreewindow.py:88
+msgid "Save this pedigree"
+msgstr "Зберегти цей родовід"
+
+#: pigeonplanner/ui/pedigreewindow.py:92
+msgid "View this pedigree"
+msgstr "Показати цей родовід"
+
+#: pigeonplanner/ui/pedigreewindow.py:94 glade/MainWindow.ui:66
+msgid "Print this pedigree"
+msgstr "Надрукувати цей родовід"
+
+#: pigeonplanner/ui/pedigreewindow.py:96
+#: pigeonplanner/reportlib/gui/printpreview.py:65 glade/ResultWindow.ui:47
+#: glade/PhotoAlbum.ui:29
+msgid "Close this window"
+msgstr "Закрити це вікно"
+
+#: pigeonplanner/ui/pedigreewindow.py:194
+#, python-format
+msgid "Cannot find image '%s'"
+msgstr "Не вдається знайти зображення  '%s'"
+
+#: pigeonplanner/ui/pedigreewindow.py:195
+msgid ""
+"You need to edit the pigeon and select the correct path or restore the "
+"original image on your computer."
+msgstr ""
+"Вам необхідно відредагувати голуба і вибрати правильний шлях до зображення "
+"на комп'ютері."
+
+#: pigeonplanner/ui/pedigreewindow.py:212 pigeonplanner/ui/resultwindow.py:770
+msgid "You probably don't have write permissions on this folder."
+msgstr "Ви, напевно, не мають права на запис для цієї папки."
+
+#: pigeonplanner/ui/resultwindow.py:84 pigeonplanner/ui/tabs/results.py:56
+#: glade/ResultsView.ui:656 glade/OptionsDialog.ui:1116
+#: glade/ResultParser.ui:427
+msgid "Windspeed"
+msgstr "Швидкість вітру"
+
+#: pigeonplanner/ui/resultwindow.py:86 pigeonplanner/ui/tabs/results.py:58
+#: glade/ResultsView.ui:727 glade/OptionsDialog.ui:1144
+#: glade/ResultParser.ui:460
+msgid "Temperature"
+msgstr "Температура"
+
+#: pigeonplanner/ui/resultwindow.py:88 pigeonplanner/ui/dialogs.py:256
+#: pigeonplanner/ui/tabs/results.py:60 pigeonplanner/ui/tabs/relatives.py:163
+#: pigeonplanner/ui/widgets/treeview.py:283 glade/MainWindow.ui:877
+#: glade/ResultParser.ui:587
+msgid "Year"
+msgstr "Рік"
+
+#: pigeonplanner/ui/resultwindow.py:92 pigeonplanner/ui/resultwindow.py:93
+#: pigeonplanner/ui/tabs/results.py:64 pigeonplanner/ui/tabs/results.py:65
+#: glade/OptionsDialog.ui:1023 glade/ResultWindow.ui:476
+msgid "Coefficient"
+msgstr "Коефіцієнт"
+
+#: pigeonplanner/ui/resultwindow.py:94 pigeonplanner/ui/resultwindow.py:95
+#: pigeonplanner/ui/tabs/results.py:66 pigeonplanner/ui/tabs/results.py:67
+#: glade/ResultsView.ui:690 glade/OptionsDialog.ui:1129
+#: glade/ResultParser.ui:613
+msgid "Speed"
+msgstr "Швидкість"
+
+#: pigeonplanner/ui/resultwindow.py:393 pigeonplanner/ui/tabs/results.py:363
+#: glade/ResultWindow.ui:382
+msgid "Races"
+msgstr "Перегони"
+
+#: pigeonplanner/ui/maildialog.py:152
+msgid "The e-mail has been sent succesfully!"
+msgstr "Електронна пошта успішно надіслана!"
+
+#: pigeonplanner/ui/maildialog.py:153
+msgid "Connection to server failed!"
+msgstr "Підключитись до сервера не вдалося!"
+
+#: pigeonplanner/ui/resultparser.py:51
+msgid "This tool needs Yapsy to run correctly."
+msgstr "Цей інструмент потребує  Yapsy  для коректної роботи."
+
+#: pigeonplanner/ui/resultparser.py:66
+#, python-format
+msgid "This result is not in the '%s' format. Do you want to continue?"
+msgstr "Цей результат не у форматі '%s'. Бажаєте продовжити?"
+
+#: pigeonplanner/ui/resultparser.py:122
+msgid "The date, racepoint or number of pigeons is incorrect."
+msgstr "Данні, місце випуску або кількість голубів невірне."
+
+#: pigeonplanner/ui/detailsview.py:54 glade/DetailsView.ui:1015
+msgid "Details of pigeon"
+msgstr "Інформація про голуба"
+
+#: pigeonplanner/ui/detailsview.py:56
+#, python-format
+msgid "Details of %s"
+msgstr "Подробиці %s"
+
+#: pigeonplanner/ui/mainwindow.py:277
+#, python-format
+msgid "Pigeon %s has been added"
+msgstr "Голуб %s  був доданий"
+
+#: pigeonplanner/ui/mainwindow.py:389
+#, python-format
+msgid "Pigeon %s has been removed"
+msgstr "Голуб %s був видалений"
+
+#: pigeonplanner/ui/mainwindow.py:394
+#, python-format
+msgid "%s pigeons have been removed"
+msgstr "%s голуби були видалені"
+
+#: pigeonplanner/ui/mainwindow.py:514 glade/MainWindow.ui:236
+msgid "Search for updates..."
+msgstr "Пошук оновлень ..."
+
+#: pigeonplanner/ui/mainwindow.py:516
+msgid "Go to the website?"
+msgstr "Перейти на домашню сторінку?"
+
+#: pigeonplanner/ui/locationchooser.py:57
+#: pigeonplanner/ui/tools/distancecalculator.py:51
+msgid "This tool needs Geopy 0.95.0 or higher to run correctly."
+msgstr ""
+"Цей інструмент потребує  Geopy 0.95.0  або вище, для правильного запуску."
+
+#: pigeonplanner/ui/locationchooser.py:65
+#, python-format
+msgid "Can't find location '%s'"
+msgstr "Не вдається знайти місце розташування '%s'"
+
+#: pigeonplanner/ui/dbmanager.py:41
+msgid "Select a database file..."
+msgstr "Виберіть файл бази даних ..."
+
+#: pigeonplanner/ui/dbmanager.py:44
+msgid "Pigeon Planner database"
+msgstr "База даних Pigeon Planner."
+
+#: pigeonplanner/ui/dbmanager.py:92
+msgid "Select a directory..."
+msgstr "Виберіть каталог ..."
+
+#: pigeonplanner/ui/dbmanager.py:303
+msgid ""
+"It's not allowed to close the database manager when no database is opened."
+msgstr ""
+"Неможливо закрити менеджер баз даних, якщо не була відкрита жодна база даних."
+
+#: pigeonplanner/ui/logdialog.py:39
+msgid "Logfile Viewer"
+msgstr "Переглядач Logfile"
+
+#: pigeonplanner/ui/dialogs.py:58
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Viktor Kosenko https://launchpad.net/~ksviktor"
+
+#: pigeonplanner/ui/dialogs.py:68 glade/MainWindow.ui:244
+msgid "General information"
+msgstr "Загальна інформація"
+
+#: pigeonplanner/ui/dialogs.py:93
+msgid "Technical details"
+msgstr "Технічні подробиці"
+
+#: pigeonplanner/ui/dialogs.py:96
+msgid "Data information"
+msgstr "Дані інформації"
+
+#: pigeonplanner/ui/dialogs.py:113
+msgid "Number of pigeons"
+msgstr "Кількість голубів"
+
+#: pigeonplanner/ui/dialogs.py:114 glade/MainWindow.ui:427
+msgid "Cocks"
+msgstr "Самці"
+
+#: pigeonplanner/ui/dialogs.py:116 glade/MainWindow.ui:459
+msgid "Hens"
+msgstr "Самки"
+
+#: pigeonplanner/ui/dialogs.py:118 glade/MainWindow.ui:491
+msgid "Young birds"
+msgstr "Молоді"
+
+#: pigeonplanner/ui/dialogs.py:124
+msgid "Number of results"
+msgstr "Кількість результатів"
+
+#: pigeonplanner/ui/dialogs.py:125
+msgid "Number of couples"
+msgstr "Кількість пар"
+
+#: pigeonplanner/ui/dialogs.py:148
+msgid "Create backup"
+msgstr "Створити резервну копію"
+
+#: pigeonplanner/ui/dialogs.py:149
+msgid "Choose a directory where to save the backup"
+msgstr "Виберіть каталог для зберігання резервної копії"
+
+#: pigeonplanner/ui/dialogs.py:155 glade/OptionsDialog.ui:386
+msgid "Backup"
+msgstr "Резервне копіювання"
+
+#: pigeonplanner/ui/dialogs.py:164
+msgid "Restore backup"
+msgstr "Відновити з резервної копії"
+
+#: pigeonplanner/ui/dialogs.py:165
+msgid "Choose a Pigeon Planner backup file to restore"
+msgstr "Вибрати резервну копію для відновлення"
+
+#: pigeonplanner/ui/dialogs.py:168
+msgid "Warning! This will overwrite the existing database!"
+msgstr "Увага! Ця операція перезапише наявну базу даних!"
+
+#: pigeonplanner/ui/dialogs.py:176
+msgid "Restore"
+msgstr "Відновити"
+
+#: pigeonplanner/ui/dialogs.py:217
+msgid "Removing the selected medication entry"
+msgstr "Видалення вибраного запису ліків"
+
+#: pigeonplanner/ui/dialogs.py:219
+msgid "Remove this entry for all pigeons?"
+msgstr "Видалити цей запис для всіх голубів?"
+
+#: pigeonplanner/ui/dialogs.py:241
+msgid "Search a pigeon"
+msgstr "Шукати голуба"
+
+#: pigeonplanner/ui/dialogs.py:274 glade/MainWindow.ui:300
+msgid "Show all pigeons"
+msgstr "Показати всіх голубів"
+
+#: pigeonplanner/ui/tabs/media.py:39 glade/MediaView.ui:56
+msgid "Media"
+msgstr "Медіа-дані"
+
+#: pigeonplanner/ui/tabs/media.py:114 glade/OptionsDialog.ui:786
+msgid "Other"
+msgstr "Інше"
+
+#: pigeonplanner/ui/tabs/pedigree.py:35
+msgid "<b>Pedigree sire</b>"
+msgstr "<b>Родовід батька</b>"
+
+#: pigeonplanner/ui/tabs/pedigree.py:47
+msgid "<b>Pedigree dam</b>"
+msgstr "<b>Родовід матері</b>"
+
+#: pigeonplanner/ui/tabs/medication.py:37 glade/MedicationView.ui:278
+#: glade/MedicationView.ui:512 glade/MedicationView.ui:747
+msgid "Medication"
+msgstr "Лікування"
+
+#: pigeonplanner/ui/tabs/breeding.py:42
+msgid "Breeding"
+msgstr "Розведення"
+
+#: pigeonplanner/ui/tabs/results.py:192 pigeonplanner/ui/tabs/results.py:385
+msgid "Results of pigeon"
+msgstr "Результати голуба"
+
+#: pigeonplanner/ui/tabs/results.py:561
+msgid "Add to pedigree details"
+msgstr "Добавити деталі до родоводу."
+
+#: pigeonplanner/ui/tabs/results.py:654
+msgid "No empty space found in pedigree details."
+msgstr "Не знайдено порожній простір в деталях родоводу."
+
+#: pigeonplanner/ui/tabs/results.py:731
+msgid "Edit result for:"
+msgstr "Редагувати результат для:"
+
+#: pigeonplanner/ui/tabs/results.py:731
+msgid "Add result for:"
+msgstr "Додати результат для:"
+
+#: pigeonplanner/ui/tabs/relatives.py:37
+msgid "Relatives"
+msgstr "Родичі"
+
+#: pigeonplanner/ui/tabs/relatives.py:46
+msgid "<b>Brothers and sisters</b>"
+msgstr "<b>Брати і сестри</b>"
+
+#: pigeonplanner/ui/tabs/relatives.py:59
+msgid "<b>Half brothers and sisters</b>"
+msgstr "<b>Двоюрідні брати та сестри</b>"
+
+#: pigeonplanner/ui/tabs/relatives.py:72
+msgid "<b>Offspring</b>"
+msgstr "<b>Нащадки</b>"
+
+#: pigeonplanner/ui/tabs/relatives.py:167
+msgid "Common parent"
+msgstr "Загальні батьки"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:169
+msgid "Yards"
+msgstr "Ярди"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:170
+msgid "Kilometres"
+msgstr "Кілометри"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:171
+msgid "Metres"
+msgstr "Метри"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:172
+msgid "Centimetres"
+msgstr "Сантиметри"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:173
+msgid "Inches"
+msgstr "Дюйми"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:174
+msgid "Feet"
+msgstr "Футів"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:175
+msgid "Miles"
+msgstr "Миль"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:176
+msgid "Nautical Miles"
+msgstr "Морських миль"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:199
+msgid "Yard per Minute"
+msgstr "Ярдів в Минуту"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:200
+msgid "Metres per Minute"
+msgstr "Метрів в Минуту"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:201
+msgid "Metres per Second"
+msgstr "Метрів в Секунду"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:202
+msgid "Kilometre per Hour"
+msgstr "Кілометрів за годину"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:203
+msgid "Feet per Second"
+msgstr "Футів в секунду"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:204
+msgid "Feet per Minute"
+msgstr "Футів в хвилину"
+
+#: pigeonplanner/ui/widgets/comboboxes.py:205
+msgid "Mile per Hour"
+msgstr "Миль в Час"
+
+#: pigeonplanner/ui/widgets/latlongentry.py:38
+msgid ""
+"Input should be in one of these formats:\n"
+"  DD.dddddd°\n"
+"  DD°MM.mmm’\n"
+"  DD°MM’SS.s”"
+msgstr ""
+"Вхідні повинні знаходитися в одному з наступних форматів:\n"
+"   DD.dddddd°\n"
+"   DD°MM.mmm’\n"
+"   DD°MM’SS.s”"
+
+#: pigeonplanner/ui/widgets/statusbar.py:27
+#, python-format
+msgid "Pigeons: %s"
+msgstr "Годуби: %s"
+
+#: pigeonplanner/ui/widgets/statusbar.py:42
+#, python-format
+msgid "Filter: %s"
+msgstr "Фільтр: %s"
+
+#: pigeonplanner/ui/widgets/statusbar.py:43
+msgid "On"
+msgstr "Увімкн."
+
+#: pigeonplanner/ui/widgets/statusbar.py:44
+msgid "Off"
+msgstr "Вимкн."
+
+#: pigeonplanner/ui/widgets/pedigreeboxes.py:72
+#: pigeonplanner/ui/widgets/pedigreeboxes.py:275
+msgid "<edit>"
+msgstr "<Редагувати>"
+
+#: pigeonplanner/ui/tools/datamanager.py:37
+msgid "Colours"
+msgstr "Кольори"
+
+#: pigeonplanner/ui/tools/datamanager.py:38
+msgid "Sectors"
+msgstr "Сектори"
+
+#: pigeonplanner/ui/tools/datamanager.py:39
+msgid "Types"
+msgstr "Типи"
+
+#: pigeonplanner/ui/tools/datamanager.py:40
+msgid "Categories"
+msgstr "Категорії"
+
+#: pigeonplanner/ui/tools/datamanager.py:41
+#: pigeonplanner/ui/tools/datamanager.py:72 glade/VelocityCalculator.ui:65
+msgid "Racepoints"
+msgstr "Місця випуску"
+
+#: pigeonplanner/ui/tools/datamanager.py:42
+msgid "Strains"
+msgstr "Раси"
+
+#: pigeonplanner/ui/tools/datamanager.py:43
+msgid "Lofts"
+msgstr "Голубники"
+
+#: pigeonplanner/ui/tools/distancecalculator.py:70
+msgid ""
+"The latitude and longitude need to be in DD.dddddd° format to use this "
+"function."
+msgstr ""
+"Широта і довгота повинні бути в форматі DD.dddddd° щоб використати цю "
+"функцію."
+
+#: pigeonplanner/ui/tools/distancecalculator.py:173
+msgid "Custom"
+msgstr "Замовлення"
+
+#: pigeonplanner/reportlib/GtkPrint.py:65
+msgid "PyGtk 2.10 or later is required"
+msgstr "PyGtk 2.10 або пізнішої версії"
+
+#: pigeonplanner/reportlib/PdfDoc.py:110 pigeonplanner/reportlib/PdfDoc.py:113
+#: pigeonplanner/reportlib/backend/docbackend.py:160
+#: pigeonplanner/reportlib/backend/docbackend.py:163
+#, python-format
+msgid "Could not create %s"
+msgstr "Не можливо створити %s"
+
+#: pigeonplanner/reportlib/PdfDoc.py:249
+msgid "Contents"
+msgstr "Зміст"
+
+#: pigeonplanner/reportlib/PdfDoc.py:282
+msgid "Index"
+msgstr "Індекс"
+
+#: pigeonplanner/reportlib/backend/docbackend.py:142
+msgid "Close file first"
+msgstr "Спочатку закрийте файл"
+
+#: pigeonplanner/reportlib/backend/docbackend.py:152
+msgid "No filename given"
+msgstr "Не дано ім'я файлу"
+
+#: pigeonplanner/reportlib/backend/docbackend.py:154
+#, python-format
+msgid "File %s already open, close it first."
+msgstr "Файл %s вже відкрито, закрийте його в першу чергу."
+
+#: pigeonplanner/reportlib/gui/printpreview.py:35
+msgid "Print Preview"
+msgstr "Попер. перегляд друку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:73
+msgid "Shows the first page"
+msgstr "Показати першу сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:77
+msgid "Shows previous page"
+msgstr "Показати попередню сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:81
+msgid "Shows the next page"
+msgstr "Показати наступну сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:85
+msgid "Shows the last page"
+msgstr "Показати останню сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:108
+msgid "Zooms to fit the page width"
+msgstr "По ширині сторінки"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:112
+msgid "Zooms to fit the whole page"
+msgstr "Помістити всю сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:116
+msgid "Zooms the page in"
+msgstr "Збільшити сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:120
+msgid "Zooms the page out"
+msgstr "Зменшити сторінку"
+
+#: pigeonplanner/reportlib/gui/printpreview.py:348
+#, python-format
+msgid "of %d"
+msgstr "з %d"
+
+#: pigeonplanner/database/manager.py:77
+msgid "My pigeons"
+msgstr "Мої голуби"
+
+#: pigeonplanner/database/manager.py:78
+msgid "My default database"
+msgstr "Моя база даних за замовчуванням"
+
+#: pigeonplanner/database/manager.py:161
+msgid "This database is already added."
+msgstr "Ця база даних вже додана."
+
+#: pigeonplanner/database/manager.py:180
+#, python-format
+msgid "Database path '%s' is not writeable."
+msgstr "База даних  '%s'  недоступна для запису."
+
+#: pigeonplanner/database/manager.py:201
+#, python-format
+msgid ""
+"Moving the database failed with message:\n"
+"%s"
+msgstr ""
+"Переміщення бази даних не вдалося з повідомленням:\n"
+"%s"
+
+#: pigeonplanner/database/manager.py:221
+msgid "Unable to remove the database: permission denied"
+msgstr "Не вдається видалити базу даних: в дозволі відмовлено."
+
+#: pigeonplanner/database/manager.py:266
+msgid "Database name is required."
+msgstr "Ім'я бази даних не потрібно."
+
+#: pigeonplanner/database/manager.py:269
+#, python-format
+msgid "Database name '%s' already exists."
+msgstr "Ім'я бази даних '%s' вже існує."
+
+#: pigeonplanner/core/common.py:43
+msgid "Cock"
+msgstr "Голуб"
+
+#: pigeonplanner/core/common.py:44
+msgid "Hen"
+msgstr "Голубка"
+
+#: pigeonplanner/core/common.py:45
+msgid "Young bird"
+msgstr "Молоде"
+
+#: pigeonplanner/core/common.py:55
+msgid "Dead"
+msgstr "Помер [ла]"
+
+#: pigeonplanner/core/common.py:56
+msgid "Active"
+msgstr "Активний"
+
+#: pigeonplanner/core/common.py:57
+msgid "Sold"
+msgstr "Продано"
+
+#: pigeonplanner/core/common.py:58
+msgid "Lost"
+msgstr "Втрачений"
+
+#: pigeonplanner/core/common.py:59
+msgid "Breeder"
+msgstr "Заводчик"
+
+#: pigeonplanner/core/common.py:60
+msgid "On loan"
+msgstr "В борг"
+
+#: pigeonplanner/core/common.py:61
+msgid "Widow"
+msgstr "Вдова"
+
+#: pigeonplanner/core/common.py:238
+msgid "Error: This file does not exist"
+msgstr "Помилка: Цей файл не існує"
+
+#: pigeonplanner/core/common.py:245
+msgid "Error opening file:"
+msgstr "Помилка при відкритті файлу:"
+
+#: glade/MainWindow.ui:10
+msgid "View online help"
+msgstr "Допомога в Інтернеті"
+
+#: glade/MainWindow.ui:18
+msgid "Select all"
+msgstr "Обрати все"
+
+#: glade/MainWindow.ui:19
+msgid "Select all pigeons"
+msgstr "Обрати всіх голубів"
+
+#: glade/MainWindow.ui:25
+msgid "_File"
+msgstr "_Файл"
+
+#: glade/MainWindow.ui:35 glade/MainWindow.ui:79
+msgid "_Backup"
+msgstr "_Резервне копіювання"
+
+#: glade/MainWindow.ui:40
+msgid "_Pigeon"
+msgstr "_Голуб"
+
+#: glade/MainWindow.ui:45
+msgid "_Edit"
+msgstr "_Редагувати"
+
+#: glade/MainWindow.ui:50
+msgid "_View"
+msgstr "Вид"
+
+#: glade/MainWindow.ui:55
+msgid "_Tools"
+msgstr "_Інструменти"
+
+#: glade/MainWindow.ui:60
+msgid "_Help"
+msgstr "_Допомога"
+
+#: glade/MainWindow.ui:65 glade/MainWindow.ui:145
+msgid "_Pedigree"
+msgstr "_Родовід"
+
+#: glade/MainWindow.ui:72
+msgid "Blank pedigree"
+msgstr "Бланк родоводу"
+
+#: glade/MainWindow.ui:73
+msgid "Print a blank pedigree"
+msgstr "Друкувати бланк родовіду"
+
+#: glade/MainWindow.ui:80
+msgid "Create a backup of your database"
+msgstr "Створити резервну копію вашої Бази даних"
+
+#: glade/MainWindow.ui:87
+msgid "_Restore"
+msgstr "_Відновити"
+
+#: glade/MainWindow.ui:88
+msgid "Restore a backup of your database"
+msgstr "Відновити резервну копію бази даних"
+
+#: glade/MainWindow.ui:95
+msgid "Quit the program"
+msgstr "Вийти з програми"
+
+#: glade/MainWindow.ui:103
+msgid "Add a new pigeon"
+msgstr "Додати нового голуба"
+
+#: glade/MainWindow.ui:111
+msgid "Add range"
+msgstr "Додати ряд голубів (номера кілець)"
+
+#: glade/MainWindow.ui:112 glade/MainWindow.ui:727
+msgid "Add a range of pigeons"
+msgstr "Додати список голубів"
+
+#: glade/MainWindow.ui:120
+msgid "_Logfile Viewer"
+msgstr "_Переглядач Logfile"
+
+#: glade/MainWindow.ui:121
+msgid "See the logfile"
+msgstr "Дивитися Logfile"
+
+#: glade/MainWindow.ui:129
+msgid "Edit the selected pigeon"
+msgstr "Редагувати обраного голуба"
+
+#: glade/MainWindow.ui:137
+msgid "Remove the selected pigeon"
+msgstr "Видалити обраного голуба"
+
+#: glade/MainWindow.ui:146
+msgid "View the detailed pedigree of this pigeon"
+msgstr "Дивитися докладніший родовід голуба"
+
+#: glade/MainWindow.ui:154
+msgid "Add resul_t"
+msgstr "Додати резул_т"
+
+#: glade/MainWindow.ui:155
+msgid "Add a new result for this pigeon"
+msgstr "Додати новий результат цього голуба"
+
+#: glade/MainWindow.ui:162
+msgid "Configure the application"
+msgstr "Налаштувати додаток"
+
+#: glade/MainWindow.ui:170
+msgid "_Filter..."
+msgstr "_Фільтр..."
+
+#: glade/MainWindow.ui:171 glade/ResultWindow.ui:40
+msgid "Set filter options"
+msgstr "Налаштувати фільтр"
+
+#: glade/MainWindow.ui:178 glade/VelocityCalculator.ui:238
+msgid "Velocity calculator"
+msgstr "Калькулятор швидкості"
+
+#: glade/MainWindow.ui:179
+msgid "Calculate the velocity of flights"
+msgstr "Розрахувати швидкість польоту"
+
+#: glade/MainWindow.ui:185 glade/DistanceCalculator.ui:26
+msgid "Distance calculator"
+msgstr "Калькулятор відстані"
+
+#: glade/MainWindow.ui:186
+msgid "Calculate the distance between locations"
+msgstr "Розрахувати відстань між точками"
+
+#: glade/MainWindow.ui:192 glade/RaceManager.ui:20
+msgid "Racepoint manager"
+msgstr "Управління місцями випуску"
+
+#: glade/MainWindow.ui:193
+msgid "Manage the racepoints and distances"
+msgstr "Управління місцем випуску і відстані"
+
+#: glade/MainWindow.ui:199
+msgid "Photo album"
+msgstr "Фотоальбом"
+
+#: glade/MainWindow.ui:200
+msgid "View the images of your pigeons"
+msgstr "Дивитися зображення ваших голубів"
+
+#: glade/MainWindow.ui:206 glade/AddressBook.ui:9
+msgid "Address book"
+msgstr "Адресна книга"
+
+#: glade/MainWindow.ui:207
+msgid "View the address book"
+msgstr "Перегляд адресної книги"
+
+#: glade/MainWindow.ui:213 glade/DataManager.ui:26
+msgid "Data manager"
+msgstr "Управління даними"
+
+#: glade/MainWindow.ui:214
+msgid "Manage your data"
+msgstr "Управління Вашими даними"
+
+#: glade/MainWindow.ui:220
+msgid "Website"
+msgstr "Веб сайт"
+
+#: glade/MainWindow.ui:221
+msgid "Go to the website for more information"
+msgstr "Сходити на сайт проекту за додатковою інформацією"
+
+#: glade/MainWindow.ui:228
+msgid "Forum"
+msgstr "Форум"
+
+#: glade/MainWindow.ui:229
+msgid "Go to the forum for online help"
+msgstr "Йти на форум для online допомоги"
+
+#: glade/MainWindow.ui:237
+msgid "Search online for program updates"
+msgstr "Пошук онлайн оновлення програми"
+
+#: glade/MainWindow.ui:251
+msgid "About this application"
+msgstr "Про програму"
+
+#: glade/MainWindow.ui:258
+msgid "Navigation arrows"
+msgstr "Стрілки"
+
+#: glade/MainWindow.ui:259 glade/OptionsDialog.ui:591
+msgid "Show or hide the navigation arrows"
+msgstr "Показати стрілки"
+
+#: glade/MainWindow.ui:265
+msgid "Statistics"
+msgstr "Статистика"
+
+#: glade/MainWindow.ui:266 glade/OptionsDialog.ui:605
+msgid "Show or hide pigeon statistics"
+msgstr "Показати або приховати статистику"
+
+#: glade/MainWindow.ui:272
+msgid "Toolbar"
+msgstr "Панель інструментів"
+
+#: glade/MainWindow.ui:273 glade/OptionsDialog.ui:619
+msgid "Show or hide the toolbar"
+msgstr "Показати чи сховати панель інструментів"
+
+#: glade/MainWindow.ui:279
+msgid "Statusbar"
+msgstr "Рядок стану"
+
+#: glade/MainWindow.ui:280 glade/OptionsDialog.ui:633
+msgid "Show or hide the statusbar"
+msgstr "Показати чи сховати рядок стану"
+
+#: glade/MainWindow.ui:286
+msgid "Export..."
+msgstr "Експорт ..."
+
+#: glade/MainWindow.ui:287
+msgid "Export data to other formats"
+msgstr "Експорт даних в інші формати"
+
+#: glade/MainWindow.ui:294
+msgid "Print a list of pigeons"
+msgstr "Роздрукувати список голубів"
+
+#: glade/MainWindow.ui:301
+msgid "Show all pigeons in the list"
+msgstr "Показати всіх голубів у списку"
+
+#: glade/MainWindow.ui:307 glade/DBManager.ui:8
+msgid "Database manager"
+msgstr "Менеджер баз даних"
+
+#: glade/MainWindow.ui:308
+msgid "Manage your databases"
+msgstr "Управління базами даних"
+
+#: glade/MainWindow.ui:399
+msgid "Total"
+msgstr "Всього"
+
+#: glade/MainWindow.ui:907 glade/DetailsView.ui:1573
+#: glade/DistanceCalculator.ui:331
+msgid "To"
+msgstr "До"
+
+#: glade/MainWindow.ui:959 glade/DetailsView.ui:1512
+#: glade/DistanceCalculator.ui:203
+msgid "From"
+msgstr "З"
+
+#: glade/MainWindow.ui:1007
+msgid "Remove pigeon"
+msgstr "Видалити голуба"
+
+#: glade/MainWindow.ui:1094
+msgid "The following pigeon will be removed:"
+msgstr "Наступний голуб буде видалений:"
+
+#: glade/MainWindow.ui:1133
+msgid "Keep this pigeon in the pedigree"
+msgstr "Зберегти результати в родоводі"
+
+#: glade/MainWindow.ui:1148
+msgid "Keep results of this pigeon"
+msgstr "Зберегти результати голуба"
+
+#: glade/VelocityCalculator.ui:329
+msgid "Time"
+msgstr "Час"
+
+#: glade/VelocityCalculator.ui:352 glade/VelocityCalculator.ui:725
+#: glade/DistanceCalculator.ui:415
+msgid "Calculate"
+msgstr "Вирахувати"
+
+#: glade/VelocityCalculator.ui:471 glade/VelocityCalculator.ui:878
+msgid "Hours"
+msgstr "Години"
+
+#: glade/VelocityCalculator.ui:495 glade/VelocityCalculator.ui:902
+msgid "Minutes"
+msgstr "Хвилини"
+
+#: glade/VelocityCalculator.ui:519 glade/VelocityCalculator.ui:926
+msgid "Seconds"
+msgstr "Секунди"
+
+#: glade/VelocityCalculator.ui:713
+msgid "Range"
+msgstr "Діапазон"
+
+#: glade/VelocityCalculator.ui:1174
+msgid "Prognosis"
+msgstr "Прогноз"
+
+#: glade/ResultsView.ui:23
+msgid "View all"
+msgstr "Переглянути все"
+
+#: glade/ResultsView.ui:39
+msgid "Import"
+msgstr "Імпортувати"
+
+#: glade/ResultsView.ui:263 glade/BreedingView.ui:784
+#: glade/MedicationView.ui:707
+msgid "Date*"
+msgstr "Дата*"
+
+#: glade/ResultsView.ui:275
+msgid "Racepoint*"
+msgstr "Місце випуску*"
+
+#: glade/BreedingView.ui:85 glade/BreedingView.ui:282
+#: glade/BreedingView.ui:1007 glade/BreedingView.ui:1175
+msgid "Laid"
+msgstr "Знесене"
+
+#: glade/BreedingView.ui:113 glade/BreedingView.ui:310
+#: glade/BreedingView.ui:1037 glade/BreedingView.ui:1205
+msgid "Hatched"
+msgstr "Вилупилось"
+
+#: glade/BreedingView.ui:158 glade/BreedingView.ui:355
+#: glade/BreedingView.ui:1050 glade/BreedingView.ui:1218
+msgid "Successful"
+msgstr "Успішно"
+
+#: glade/BreedingView.ui:235 glade/BreedingView.ui:1127
+msgid "Egg 1"
+msgstr "Яйце 1"
+
+#: glade/BreedingView.ui:432 glade/BreedingView.ui:1295
+msgid "Egg 2"
+msgstr "Яйце 2"
+
+#: glade/BreedingView.ui:499 glade/BreedingView.ui:858
+msgid "Series"
+msgstr "Відділ"
+
+#: glade/BreedingView.ui:540 glade/BreedingView.ui:890
+msgid "Nestbox"
+msgstr "Гніздо"
+
+#: glade/BreedingView.ui:676
+msgid "Breeding data"
+msgstr "Дані розведення"
+
+#: glade/BreedingView.ui:814
+msgid "Mate*"
+msgstr "Партнер*"
+
+#: glade/BreedingView.ui:1100 glade/BreedingView.ui:1268
+msgid "Add pigeon to list"
+msgstr "Додати в список"
+
+#: glade/FilterDialog.ui:13
+msgid "Filter pigeons"
+msgstr "Фільтрувати голубів"
+
+#: glade/FilterDialog.ui:109 glade/ResultWindow.ui:434
+msgid "Pigeon year"
+msgstr "Голуб рік"
+
+#: glade/OptionsDialog.ui:95
+msgid "Options"
+msgstr "Опції"
+
+#: glade/OptionsDialog.ui:116
+msgid "Default"
+msgstr "За замовчуванням"
+
+#: glade/OptionsDialog.ui:242
+msgid "Check for updates on startup"
+msgstr "Перевіряти оновлення при запуску"
+
+#: glade/OptionsDialog.ui:255
+msgid "Update"
+msgstr "Оновлення"
+
+#: glade/OptionsDialog.ui:285
+msgid "Make an automatic backup"
+msgstr "Автоматично створювати резервну копію"
+
+#: glade/OptionsDialog.ui:331 glade/LocationChooser.ui:90
+#: glade/LocationChooser.ui:180 glade/DistanceCalculator.ui:113
+#: glade/DistanceCalculator.ui:241
+msgid "Location"
+msgstr "Місцезнаходження"
+
+#: glade/OptionsDialog.ui:345
+msgid "Interval"
+msgstr "Інтервал"
+
+#: glade/OptionsDialog.ui:439
+msgid "Change the language to"
+msgstr "Поміняти мову на"
+
+#: glade/OptionsDialog.ui:454
+msgid "Language"
+msgstr "Мова"
+
+#: glade/OptionsDialog.ui:490
+msgid "Default distance unit"
+msgstr "Одиниці дистанції по замовчуванню"
+
+#: glade/OptionsDialog.ui:502
+msgid "Default speed unit"
+msgstr "Одиниці швидкості по замовчуванню"
+
+#: glade/OptionsDialog.ui:541
+msgid "Units"
+msgstr "Одиниці"
+
+#: glade/OptionsDialog.ui:653
+msgid "Window"
+msgstr "Вікно"
+
+#: glade/OptionsDialog.ui:691
+msgid "Results mode"
+msgstr "Режим результатів"
+
+#: glade/OptionsDialog.ui:726
+msgid "Hide deleted pigeons in lists"
+msgstr "Сховати видалених голубів у списках"
+
+#: glade/OptionsDialog.ui:745
+msgid "Color row of deleted pigeons in lists"
+msgstr "Колір рядків видалених голубів у списках"
+
+#: glade/OptionsDialog.ui:933
+msgid "Text"
+msgstr "Текст"
+
+#: glade/OptionsDialog.ui:947 glade/OptionsDialog.ui:1590
+msgid "Image"
+msgstr "Зображення"
+
+#: glade/OptionsDialog.ui:962
+msgid "Text and image"
+msgstr "Текст та зображення"
+
+#: glade/OptionsDialog.ui:991
+msgid "Main Columns"
+msgstr "Головні стовпці"
+
+#: glade/OptionsDialog.ui:1163
+msgid "Results Columns"
+msgstr "Стовпці результатів"
+
+#: glade/OptionsDialog.ui:1219
+msgid "Paper format:"
+msgstr "Формат паперу:"
+
+#: glade/OptionsDialog.ui:1253
+msgid "Paper"
+msgstr "Папір"
+
+#: glade/OptionsDialog.ui:1294
+msgid "Address"
+msgstr "Адреса"
+
+#: glade/OptionsDialog.ui:1307 glade/AddressBook.ui:331
+msgid "Phone"
+msgstr "Телефон"
+
+#: glade/OptionsDialog.ui:1341
+msgid "Personal"
+msgstr "Особисте"
+
+#: glade/OptionsDialog.ui:1401
+msgid "Pedigree layout:"
+msgstr "Розташування родоводу:"
+
+#: glade/OptionsDialog.ui:1457
+msgid "Show pigeon colour in pedigree"
+msgstr "Показати колір голуба в родоводі"
+
+#: glade/OptionsDialog.ui:1471
+msgid "Enable box border color"
+msgstr "Включити колір границь вікон"
+
+#: glade/OptionsDialog.ui:1485
+msgid "Enable box fill color"
+msgstr "Включити колір заливки вікон"
+
+#: glade/OptionsDialog.ui:1505
+msgid "Layout"
+msgstr "Планування"
+
+#: glade/OptionsDialog.ui:1575 glade/DetailsView.ui:215
+#: glade/DetailsView.ui:608
+msgid "Extra"
+msgstr "Додатково"
+
+#: glade/OptionsDialog.ui:1609 glade/ResultWindow.ui:422
+msgid "Pigeon"
+msgstr "Голуб"
+
+#: glade/OptionsDialog.ui:1662 glade/OptionsDialog.ui:1749
+msgid "Show the column names"
+msgstr "Показати імена стовпців"
+
+#: glade/OptionsDialog.ui:1676
+msgid "Always show the sex column"
+msgstr "Завжди показувати колонку стать"
+
+#: glade/OptionsDialog.ui:1763
+msgid "Show the date"
+msgstr "Показати дату"
+
+#: glade/OptionsDialog.ui:1841
+msgid "Custom coefficient multiplier"
+msgstr "Інший множник коефіцієнта"
+
+#: glade/OptionsDialog.ui:1888
+msgid "Check for development updates"
+msgstr "Перевірити розробку оновлень"
+
+#: glade/ResultWindow.ui:9 glade/ExportWindow.ui:90
+msgid "Export"
+msgstr "Експорт"
+
+#: glade/ResultWindow.ui:10
+msgid "Export these results"
+msgstr "Відправити ці результати"
+
+#: glade/ResultWindow.ui:17
+msgid "Save these results"
+msgstr "Зберегти ці результати"
+
+#: glade/ResultWindow.ui:24
+msgid "Email these results"
+msgstr "Надіслати поштою ці результати"
+
+#: glade/ResultWindow.ui:32
+msgid "View these results"
+msgstr "Переглянути ці результати"
+
+#: glade/ResultWindow.ui:39
+msgid "Filter"
+msgstr "Фільтр"
+
+#: glade/ResultWindow.ui:54
+msgid "Print these results"
+msgstr "Роздрукувати ці результати"
+
+#: glade/ResultWindow.ui:79
+msgid "Filter results"
+msgstr "Фільтрувати результати"
+
+#: glade/ResultWindow.ui:756
+msgid "Hide non-classified results"
+msgstr "Приховати некласифіковані результати"
+
+#: glade/ResultWindow.ui:807
+msgid "View all results"
+msgstr "Дивитися всі результати"
+
+#: glade/DetailsView.ui:18
+msgid ""
+"Unable to retrieve data. The requested pigeon is probably removed from the "
+"database."
+msgstr ""
+"Не вдалося отримати дані. Запитуваний голуб, ймовірно, видалений з бази "
+"даних."
+
+#: glade/DetailsView.ui:175 glade/DetailsView.ui:550
+msgid "Dam"
+msgstr "Матір"
+
+#: glade/DetailsView.ui:188 glade/DetailsView.ui:563
+msgid "Sire"
+msgstr "Батько"
+
+#: glade/DetailsView.ui:1025
+msgid "Pigeon status"
+msgstr "Статус голуба"
+
+#: glade/DetailsView.ui:1083
+msgid "Choose a status for this pigeon:"
+msgstr "Виберіть статус для цього голуба:"
+
+#: glade/DetailsView.ui:1119
+msgid "The current status is:"
+msgstr "Поточний статус:"
+
+#: glade/DetailsView.ui:1195 glade/DetailsView.ui:1295
+#: glade/DetailsView.ui:1410 glade/DetailsView.ui:1525
+#: glade/DetailsView.ui:1638 glade/DetailsView.ui:1773
+msgid "Extra info"
+msgstr "Додаткова інформація"
+
+#: glade/DetailsView.ui:1252
+msgid "No extra information available."
+msgstr "Немає додаткової інформації."
+
+#: glade/DetailsView.ui:1326
+msgid "Buyer"
+msgstr "Покупець"
+
+#: glade/DetailsView.ui:1625
+msgid "Loaned"
+msgstr "Позичений"
+
+#: glade/DetailsView.ui:1671
+msgid "Person"
+msgstr "Особа"
+
+#: glade/DetailsView.ui:1720
+msgid "Back"
+msgstr "Назад"
+
+#: glade/DetailsView.ui:1786
+msgid "Partner"
+msgstr "Партнер"
+
+#: glade/Dialogs.ui:114
+msgid "Send to:"
+msgstr "Відправити:"
+
+#: glade/Dialogs.ui:149
+msgid "Your name:"
+msgstr "Ваше ім'я:"
+
+#: glade/Dialogs.ui:184
+msgid "Your e-mailaddress:"
+msgstr "Ваша адреса електронної пошти:"
+
+#: glade/Dialogs.ui:218
+msgid "Subject:"
+msgstr "Тема:"
+
+#: glade/Dialogs.ui:257
+msgid "Message:"
+msgstr "Повідомлення:"
+
+#: glade/Dialogs.ui:380
+msgid "Attached file:"
+msgstr "Прикріплений файл:"
+
+#: glade/Dialogs.ui:403
+msgid "Sending..."
+msgstr "Відправка ..."
+
+#: glade/LocationChooser.ui:9 glade/LocationChooser.ui:163
+msgid "Search coordinates"
+msgstr "Пошук координат"
+
+#: glade/LocationChooser.ui:102 glade/DistanceCalculator.ui:125
+#: glade/DistanceCalculator.ui:253 glade/RaceManager.ui:144
+#: glade/AddressBook.ui:441
+msgid "Latitude"
+msgstr "Широта"
+
+#: glade/LocationChooser.ui:116 glade/DistanceCalculator.ui:139
+#: glade/DistanceCalculator.ui:267 glade/RaceManager.ui:158
+#: glade/AddressBook.ui:469
+msgid "Longitude"
+msgstr "Довгота"
+
+#: glade/ExportWindow.ui:21
+msgid "Export data"
+msgstr "Експорт даних"
+
+#: glade/ExportWindow.ui:138 glade/DBManager.ui:507
+msgid "Path"
+msgstr "Шлях"
+
+#: glade/ExportWindow.ui:193
+msgid "Selected"
+msgstr "Обраний"
+
+#: glade/ExportWindow.ui:209
+msgid "Visible"
+msgstr "Видимий"
+
+#: glade/ExportWindow.ui:225
+msgid "All"
+msgstr "Все"
+
+#: glade/DBManager.ui:250
+msgid "Load this database as default on startup"
+msgstr "Завантажити цю базу даних за замовчуванням при запуску"
+
+#: glade/DBManager.ui:283
+msgid "Database information"
+msgstr "Інформація бази даних"
+
+#: glade/DBManager.ui:474
+msgid "For advanced use only. Use the default settings if you are in doubt."
+msgstr ""
+"Тільки для досвідчених користувачів.\r\n"
+"Якщо у вас є сумніви,будь ласка \r\n"
+"використовуйте налаштування за замовчуванням."
+
+#: glade/DistanceCalculator.ui:446
+msgid "Result"
+msgstr "Результат"
+
+#: glade/MedicationView.ui:171 glade/MedicationView.ui:733
+msgid "Done by"
+msgstr "Виконав"
+
+#: glade/MedicationView.ui:326 glade/MedicationView.ui:761
+msgid "Dosage"
+msgstr "Дозування"
+
+#: glade/MedicationView.ui:362 glade/MedicationView.ui:790
+msgid "Vaccination"
+msgstr "Вакцинація"
+
+#: glade/ResultParser.ui:39
+msgid "Import results"
+msgstr "Імпорт результатів"
+
+#: glade/ResultParser.ui:73
+msgid "File:"
+msgstr "Файл:"
+
+#: glade/ResultParser.ui:85
+msgid "Parser:"
+msgstr "Аналізатор"
+
+#: glade/ResultParser.ui:121
+msgid "Parse"
+msgstr "Аналізувати"
+
+#: glade/ResultParser.ui:494
+msgid "Edit race details"
+msgstr "Редагувати деталі гонки"
+
+#: glade/ResultParser.ui:527
+msgid "No results were found for your pigeons"
+msgstr "Нема результатів для голубів"
+
+#: glade/ResultParser.ui:600
+msgid "Place"
+msgstr "Місце"
+
+#: glade/ResultParser.ui:711
+msgid "Parser error"
+msgstr "Синтаксична помилка"
+
+#: glade/ResultParser.ui:771
+msgid ""
+"The file you selected could not be parsed correctly. Try selecting another "
+"parser that matches your file and try again. Or send the developers some "
+"useful data shown below, so they can work on this issue."
+msgstr ""
+"Обраний файл не може бути оброблено правильно. Спробуйте вибрати інший "
+"аналізатор, який відповідає файлу і повторіть спробу. Або надішліть "
+"розробникам деякі корисні дані, наведені нижче."
+
+#: glade/PhotoAlbum.ui:8
+msgid "Zooms to fit the whole picture"
+msgstr "Змінити за розміром все зображення"
+
+#: glade/PhotoAlbum.ui:15
+msgid "View slideshow"
+msgstr "Переглянути слайдшоу"
+
+#: glade/PhotoAlbum.ui:22
+msgid "View in fullscreen"
+msgstr "Дивитись на весь екран"
+
+#: glade/PhotoAlbum.ui:36
+msgid "Zooms the picture out"
+msgstr "Зменшити картинку"
+
+#: glade/PhotoAlbum.ui:43
+msgid "Zooms the picture in"
+msgstr "Збільшити картинку"
+
+#: glade/PhotoAlbum.ui:50
+msgid "Shows the last picture"
+msgstr "Показати останню картинку"
+
+#: glade/PhotoAlbum.ui:57
+msgid "Shows the next picture"
+msgstr "Показати наступну картинку"
+
+#: glade/PhotoAlbum.ui:64
+msgid "Shows previous picture"
+msgstr "Показати попередню картинку"
+
+#: glade/PhotoAlbum.ui:71
+msgid "Shows the first picture"
+msgstr "Показати першу картинку"
+
+#: glade/PhotoAlbum.ui:79
+msgid "Photo Album"
+msgstr "Фотоальбом"
+
+#: glade/PhotoAlbum.ui:127
+msgid "There are no images found."
+msgstr "Жодної картинки не знайдено."
+
+#: glade/DataManager.ui:112
+msgid "Dataset"
+msgstr "Набір даних"
+
+#: glade/DataManager.ui:123 glade/DataManager.ui:231
+msgid "Item"
+msgstr "Елемент"
+
+#: glade/DataManager.ui:250
+msgid "Manage items"
+msgstr "Управління елементами"
+
+#: glade/DataManager.ui:321
+msgid "No unused objects found!"
+msgstr "Знайдені об'єкти не використовуються!"
+
+#: glade/DataManager.ui:407
+msgid "Unused objects"
+msgstr "Невикористані об'єкти"
+
+#: glade/RaceManager.ui:205
+msgid "Click here to add more racepoints"
+msgstr "Натисніть тут, щоб додати більше місць випуску"
+
+#: glade/AddressBook.ui:170
+msgid "Street"
+msgstr "Вулиця"
+
+#: glade/AddressBook.ui:249
+msgid "Zipcode / City"
+msgstr "Індекс / Місто"
+
+#: glade/AddressBook.ui:290
+msgid "Country"
+msgstr "Країна"
+
+#: glade/AddressBook.ui:571
+msgid "This is me"
+msgstr "Це я"
+
+#: data/TranslationWorkaround.ui:4
+msgid "A4"
+msgstr "A4"
+
+#: data/TranslationWorkaround.ui:5
+msgid "Letter"
+msgstr "Letter"
+
+#: data/TranslationWorkaround.ui:6
+msgid "Original"
+msgstr "Оригінал"
+
+#: data/TranslationWorkaround.ui:7
+msgid "Swapped details"
+msgstr "Переставлені деталі"
+
+#: data/TranslationWorkaround.ui:8
+msgid "Middle"
+msgstr "Середина"
+
+#: data/TranslationWorkaround.ui:9
+msgid "Classic"
+msgstr "Класичний"
+
+#: data/TranslationWorkaround.ui:10
+msgid "Splitted"
+msgstr "Розділений"
+
+#~ msgid "Page"
+#~ msgstr "Сторінка"
+
+#~ msgid ""
+#~ "Pigeon Planner is free software. You don’t need to pay for using it. But if "
+#~ "you like it, please consider donating to help improving it."
+#~ msgstr ""
+#~ "Pigeon Planner це вільне програмне забезпечення. Ви не зобов'язані платити "
+#~ "за його використання. Але якщо він вам сподобався, внесіть трохи грошей на "
+#~ "його поліпшення."
+
+#~ msgid "Number of cocks"
+#~ msgstr "Кількість самців"
+
+#~ msgid "Number of hens"
+#~ msgstr "Кількість самок"
+
+#~ msgid "Number of young birds"
+#~ msgstr "Кількість молодих"
+
+#~ msgid "Only show:"
+#~ msgstr "Відображати тільки:"
+
+#~ msgid "Search for:"
+#~ msgstr "Шукати:"
+
+#~ msgid "Search in:"
+#~ msgstr "Шукати в:"
+
+#~ msgid "Band numbers"
+#~ msgstr "Номера кілець"
+
+#~ msgid "Names"
+#~ msgstr "Імена"
+
+#~ msgid "Year of pigeon"
+#~ msgstr "Рік голуба"
+
+#~ msgid "Year of race"
+#~ msgstr "Рік гонки"
+
+#~ msgid "No notification set"
+#~ msgstr "Нагадування Вимкн."
+
+#~ msgid "Email this pedigree"
+#~ msgstr "Надіслати цей родовід"
+
+#~ msgid "Change the theme"
+#~ msgstr "Змінити тему"
+
+#~ msgid "Calendar"
+#~ msgstr "Календар"
+
+#~ msgid "Notify me!"
+#~ msgstr "Повідомити мене!"
+
+#~ msgid "Number of days in advance:"
+#~ msgstr "Кількість днів:"
+
+#~ msgid "Optimize"
+#~ msgstr "Оптимізувати"
+
+#~ msgid "Remove result"
+#~ msgstr "Удалить результат"
+
+#~ msgid "All fields have to be entered."
+#~ msgstr "Все поля должны быть заполнены"
+
+#~ msgid "Optimization has been completed."
+#~ msgstr "Оптимизация завершена."
+
+#~ msgid ""
+#~ "Click \"OK\" to close the program. A new database will be created the next "
+#~ "time you start the program again."
+#~ msgstr ""
+#~ "Нажмите \"ОК\" для закрытия програмы. При следующем запуске прогрммы будет "
+#~ "создана новая база данных"
+
+#~ msgid ""
+#~ "The backup was successfully restored.\n"
+#~ "Restart the program."
+#~ msgstr ""
+#~ "Резервная копия была успешно восстановлена.\n"
+#~ "Перезапуск программы."
+
+#~ msgid ""
+#~ "This will set back all the settings to the default values.\n"
+#~ "Are you sure?"
+#~ msgstr ""
+#~ "Произойдет откат всех настроек к первоначальным.\n"
+#~ "Вы уверены?"
+
+#~ msgid "Database"
+#~ msgstr "База данных"
+
+#~ msgid "Tools"
+#~ msgstr "Инструменты"
+
+#~ msgid "Addresses"
+#~ msgstr "Адреса"
+
+#~ msgid "Click here to add an image"
+#~ msgstr "Нажмите сюда для добавления изображения"
+
+#~ msgid "Enter a name for the pigeon"
+#~ msgstr "Введите имя голубя"
+
+#~ msgid ""
+#~ "A new version is available. Please go to the Pigeon Planner website by "
+#~ "clicking the link below and download the latest version"
+#~ msgstr ""
+#~ "Доступна новая версия. Пожалуйста, скачайте новую версию на сайте \"Pigeon "
+#~ "Planner\""
+
+#~ msgid "#Pigeon Planner configuration file"
+#~ msgstr "Конфигурационный файл #Pigeon Planner"
+
+#~ msgid "_Photo Album"
+#~ msgstr "_Фотоальбом"
+
+#~ msgid "Year pigeons"
+#~ msgstr "Голуби года"
+
+#~ msgid "_Website"
+#~ msgstr "Са_йт проекта"
+
+#~ msgid "Click to close this window"
+#~ msgstr "Нажмите, чтобы закрыть окно"
+
+#~ msgid "View image: "
+#~ msgstr "Смотеть изображние: "
+
+#~ msgid "Select a valid backup file"
+#~ msgstr "Выбрать хорошую резервную копию."
+
+#~ msgid "Select a directory"
+#~ msgstr "Выбрать каталог"
+
+#~ msgid "Datasets"
+#~ msgstr "Множества"
+
+#~ msgid "Search through the list of cocks"
+#~ msgstr "Искать в списке голубей самцов"
+
+#~ msgid "Search through the list of hens"
+#~ msgstr "Искать в списке голубок"
+
+#~ msgid "cock"
+#~ msgstr "голубь"
+
+#~ msgid "young bird"
+#~ msgstr "птенец"
+
+#~ msgid "hen"
+#~ msgstr "голубка"
+
+#~ msgid "Add ran_ge"
+#~ msgstr "Доба_вить список"
+
+#~ msgid "Various tools"
+#~ msgstr "Различные инструменты"
+
+#~ msgid "<b>Details of pigeon</b>"
+#~ msgstr "<b>Подробно о голубе</b>"
+
+#~ msgid "Choose an image..."
+#~ msgstr "Выбрать изображение..."
+
+#~ msgid "Add result"
+#~ msgstr "Добавить результат"
+
+#~ msgid "<b>Results of pigeon</b>"
+#~ msgstr "<b>Результаты голубя</b>"
+
+#~ msgid "Edit result"
+#~ msgstr "Редактировать результаты"
+
+#~ msgid "Go to pigeon"
+#~ msgstr "К голубю"
+
+#~ msgid "<b>Theme</b>"
+#~ msgstr "<b>Тема</b>"
+
+#~ msgid "<b>Language</b>"
+#~ msgstr "<b>Язык</b>"
+
+#~ msgid "<b>Backup</b>"
+#~ msgstr "<b>Резервное копирование</b>"
+
+#~ msgid "View detail"
+#~ msgstr "Смотреть подробности"
+
+#~ msgid "<b>Columns</b>"
+#~ msgstr "<b>Столбцы</b>"
+
+#~ msgid "<b>Other</b>"
+#~ msgstr "<b>Прочее</b>"
+
+#~ msgid "<b>Update</b>"
+#~ msgstr "<b>Обновить</b>"
+
+#, python-format
+#~ msgid ""
+#~ "Warning: There is no section '%(section)s' in the configuration file; an "
+#~ "error occured parsing its option '%(option)s', using the default "
+#~ "'%(default)s'."
+#~ msgstr ""
+#~ "Предупреждение: В конфигурационном файле не существует секции  "
+#~ "'%(section)s';В процессе разбра файла произошла ошибка. Для параметра "
+#~ "'%(option)s'    будет использовано значение '%(default)s'."
+
+#, python-format
+#~ msgid ""
+#~ "Error: There went something wrong parsing the '%(option)s' option in the "
+#~ "'%(section)s' section of the configuration file, using the default "
+#~ "'%(default)s'."
+#~ msgstr ""
+#~ "Ошибка: Er ging iets fout bij het afhandelen van de '%(option)s' optie in de "
+#~ "'%(section)s' sectie van het configuratiebestand, de standaardwaarde "
+#~ "'%(default)s' wordt gebruikt."
+
+#~ msgid "Year race"
+#~ msgstr "Ежегодная гонка:"
+
+#~ msgid "PP Backups"
+#~ msgstr "PP Возврат"
+
+#, python-format
+#~ msgid ""
+#~ "Removing item '%(item)s' from '%(dataset)s'.\n"
+#~ "\n"
+#~ "Are you sure?"
+#~ msgstr ""
+#~ "Удалить  '%(item)s' из '%(dataset)s'.\n"
+#~ "\n"
+#~ "Вы уверенны?"
+
+#~ msgid "Enter the bandnumber of the pigeon"
+#~ msgstr "Введите номер кольца голубя"
+
+#~ msgid "Enter the year of the pigeon"
+#~ msgstr "Введите год голубя"
+
+#~ msgid "<b>Edit this result</b>"
+#~ msgstr "<b>Редактировать результат</b>"
+
+#~ msgid "<b>Add a new result</b>"
+#~ msgstr "<b>Добавить новый результат</b>"
+
+#~ msgid "At position:"
+#~ msgstr "В позиции:"
+
+#~ msgid "Show an extra column"
+#~ msgstr "Показать дополнительные столбцы"
+
+#~ msgid "Value of column:"
+#~ msgstr "Зачение столбца:"
+
+#~ msgid "Insert a pigeon"
+#~ msgstr "Вставить голубя"
+
+#~ msgid "<b>Sort options</b>"
+#~ msgstr "<b>Параметры сортировки</b>"
+
+#~ msgid "Results:"
+#~ msgstr "Результаты:"
+
+#~ msgid "<b><i><big>Backup</big></i></b>"
+#~ msgstr "<b><i><big>Резервная копия</big></i></b>"
+
+#~ msgid "<b><i><big>Manage data</big></i></b>"
+#~ msgstr "<b><i><big>Данные управления</big></i></b>"
+
+#~ msgid "<b><i><big>Update</big></i></b>"
+#~ msgstr "<b><i><big>Обновить</big></i></b>"
+
+#~ msgid "<b><i><big>Velocity calculator</big></i></b>"
+#~ msgstr "<b><i><big>Калькулятор скорости</big></i></b>"
+
+#~ msgid "<b>Add items</b>"
+#~ msgstr "<b>Добавить</b>"
+
+#~ msgid "<b>Create backup</b>"
+#~ msgstr "<b>Создать резервную копию</b>"
+
+#~ msgid "<b>Remove items</b>"
+#~ msgstr "<b>Удалить</b>"
+
+#~ msgid "<b>Restore backup</b>"
+#~ msgstr "<b>Восстановить резервную копию</b>"
+
+#~ msgid "<i>Click the button below</i>"
+#~ msgstr "<i>Нажмите лежащую ниже кнопку</i>"
+
+#~ msgid "Add and remove items from your datasets"
+#~ msgstr "Добавить и удалить из базы данных"
+
+#~ msgid "Calculate velocity"
+#~ msgstr "Посчитать скорость"
+
+#~ msgid "Check now!"
+#~ msgstr "Проверить сейчас!"
+
+#~ msgid ""
+#~ "Create and restore backups from\n"
+#~ "your pigeons and results."
+#~ msgstr ""
+#~ "Создать и восстановить резервные копии из\n"
+#~ "выши голуби и результаты."
+
+#~ msgid "Distance (km)"
+#~ msgstr "Расстояние (км)"
+
+#~ msgid "Downloadpage"
+#~ msgstr "Страница загрузки"
+
+#~ msgid "From - To (meter/min)"
+#~ msgstr "Из - В (метры/мин)"
+
+#~ msgid "Here you can check if there is a program update available."
+#~ msgstr "Здесь вы можете проверить доступно ли обновление программы."
+
+#~ msgid "Here you can see some statistics of your database"
+#~ msgstr "Здесь вы можете посмотреть статистику базы данных"
+
+#~ msgid "Phone / E-mail"
+#~ msgstr "Телефон / E-mail"
+
+#~ msgid "Released (hh : mm)"
+#~ msgstr "Отказ  (чч : мм)"
+
+#~ msgid "Search database"
+#~ msgstr "Поиск базы данных"
+
+#~ msgid "Date: "
+#~ msgstr "Datum: "
+
+#~ msgid "If you remove the database, all your data will be lost."
+#~ msgstr "Еилс вы удалите базу данных, все выши данные будут потеряны."
+
+#~ msgid ""
+#~ "Optimize your database.\n"
+#~ "(Please wait, this can take some time)"
+#~ msgstr ""
+#~ "Оптимизирую вашу  базу данных\n"
+#~ "(Пожалуйста, подождите. Это может занять некоторое время."
+
+#~ msgid "<b>Optimize database</b>"
+#~ msgstr "<b>Оптимизировать базу данных</b>"
+
+#~ msgid "<b>Warning!</b>"
+#~ msgstr "<b>Предупреждение!</b>"
+
+#~ msgid "<b>Remove database</b>"
+#~ msgstr "<b>Удалить базу данных</b>"
+
+#, python-format
+#~ msgid "Removing '%(item)s' from '%(dataset)s'."
+#~ msgstr "Удаление '%(item)s' из '%(dataset)s'."
+
+#~ msgid "Click here to set the status of the pigeon"
+#~ msgstr "Нажмите здесь, чтобы установить статус"
+
+#~ msgid "<b>Personal</b>"
+#~ msgstr "<b>Личные</b>"
+
+#~ msgid "<b>Pigeon</b>"
+#~ msgstr "<b>Голубь</b>"
+
+#~ msgid "<b>Layout</b>"
+#~ msgstr "<b>Внешний вид</b>"
+
+#~ msgid "<b>Paper</b>"
+#~ msgstr "<b>Бумага</b>"
+
+#~ msgid "Distance: "
+#~ msgstr "Расстояние: "
+
+#~ msgid "City"
+#~ msgstr "Город"
+
+#~ msgid "Zipcode"
+#~ msgstr "Индекс"
+
+#~ msgid "Telephone number"
+#~ msgstr "Телефон"
+
+#~ msgid "<b>Your name:</b>"
+#~ msgstr "<b>Ваше имя:</b>"
+
+#~ msgid "<b>Subject:</b>"
+#~ msgstr "<b>Тема:</b>"
+
+#~ msgid "<b>Message:</b>"
+#~ msgstr "<b>Сообщение:</b>"
+
+#~ msgid "_Find..."
+#~ msgstr "_Знайти..."
+
+#~ msgid "Search through the list of pigeons"
+#~ msgstr "Пошук по списку голубів"
