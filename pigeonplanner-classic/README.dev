@@ -11,23 +11,23 @@ Linux:
 
 Windows:
     python setup.py py2exe
-    cd win
+    cd pigeonplanner-classic/win
     python build_packages.py
 
 Mac OS X:
     These steps will build a complete working GTK environment and need to be run
     only once (or again to update packages):
-        ln -sf mac/jhbuildrc-custom ~/.jhbuildrc-custom
+        ln -sf pigeonplanner-classic/mac/jhbuildrc-custom ~/.jhbuildrc-custom
         jhbuild bootstrap --skip=cmake
         jhbuild
-        jhbuild -m mac/pigeonplanner.modules build pigeonplanner
+        jhbuild -m pigeonplanner-classic/mac/pigeonplanner.modules build pigeonplanner
         chmod +w $PREFIX/lib/libpython2.7.dylib
         chmod +w $PREFIX/lib/libreadline.6.2.dylib
 
     The following steps will actually produce an appbundle located on your desktop:
         jhbuild shell
         python setup.py install
-        python mac/build_package.py
+        python pigeonplanner-classic/mac/build_package.py
 
 -= Other =-
     export PYTHONPATH=dev

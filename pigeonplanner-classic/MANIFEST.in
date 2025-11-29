@@ -1,7 +1,10 @@
-include AUTHORS CHANGES COPYING README.dev
+include AUTHORS CHANGES COPYING README.dev README-python.md
 include Makefile
 include i18n.py
 include pigeonplanner.py
+include setup.cfg
+include PKG-INFO
+include setup.py
 
 recursive-include data *
 recursive-include glade *

@@ -21,8 +21,8 @@ def build_dmg():
     shutil.copytree("mac/pigeonplanner.app", "mac/package/pigeonplanner.app")
 
     print "Copying meta files to temp folder..."
-    for f in ["AUTHORS", "CHANGES", "COPYING", "README"]:
-        shutil.copyfile(f, "mac/package/%s.txt" % f)
+    for f in ["../AUTHORS", "../CHANGES", "../COPYING", "../README-python.md"]:
+        shutil.copyfile(f, "mac/package/%s.txt" % f.split('/')[-1].replace('-python.md', ''))
 
     print "Creating dmg image..."
     subprocess.call(["hdiutil", "create", "mac/Pigeon_Planner-%s-Intel.dmg" % VERSION, "-ov",
