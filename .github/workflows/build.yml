@@ -1,0 +1,179 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ main, master ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: |
+          pigeon-planner-rs/package-lock.json
+          pigeon-planner-rs/package.json
+
+    - name: Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        targets: x86_64-apple-darwin, aarch64-apple-darwin
+
+    - name: Install dependencies
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm install
+        cargo install tauri-cli
+
+    - name: Build frontend
+      working-directory: ./pigeon-planner-rs
+      run: npm run build
+
+    - name: Build app (x64)
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm run tauri build --target x86_64-apple-darwin
+
+    - name: Build app (ARM64)
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm run tauri build --target aarch64-apple-darwin
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: macos-builds
+        path: |
+          pigeon-planner-rs/target/release/bundle/macos/
+          pigeon-planner-rs/target/release/bundle/dmg/
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: |
+          pigeon-planner-rs/package-lock.json
+          pigeon-planner-rs/package.json
+
+    - name: Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        targets: x86_64-pc-windows-msvc
+
+    - name: Install dependencies
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm install
+        cargo install tauri-cli
+
+    - name: Build frontend
+      working-directory: ./pigeon-planner-rs
+      run: npm run build
+
+    - name: Build app
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm run tauri build --target x86_64-pc-windows-msvc
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: windows-builds
+        path: |
+          pigeon-planner-rs/target/release/bundle/msi/
+          pigeon-planner-rs/target/release/bundle/nsis/
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: |
+          pigeon-planner-rs/package-lock.json
+          pigeon-planner-rs/package.json
+
+    - name: Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        targets: x86_64-unknown-linux-gnu
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libwebkit2gtk-4.0-dev \
+          build-essential \
+          curl \
+          wget \
+          libssl-dev \
+          libgtk-3-dev \
+          libayatana-appindicator3-dev \
+          librsvg2-dev
+
+    - name: Install dependencies
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm install
+        cargo install tauri-cli
+
+    - name: Build frontend
+      working-directory: ./pigeon-planner-rs
+      run: npm run build
+
+    - name: Build app
+      working-directory: ./pigeon-planner-rs
+      run: |
+        npm run tauri build --target x86_64-unknown-linux-gnu
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux-builds
+        path: |
+          pigeon-planner-rs/target/release/bundle/deb/
+          pigeon-planner-rs/target/release/bundle/appimage/
+
+  release:
+    needs: [build-macos, build-windows, build-linux]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          artifacts/macos-builds/**/*.dmg
+          artifacts/windows-builds/**/*.msi
+          artifacts/windows-builds/**/*.exe
+          artifacts/linux-builds/**/*.deb
+          artifacts/linux-builds/**/*.AppImage
+        body_path: ./RELEASE_NOTES.md
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

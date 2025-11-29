@@ -1,0 +1,799 @@
+/* Pigeon Planner - 组件样式 */
+
+/* ================================
+   血统表组件样式
+   ================================ */
+
+.pedigree-container {
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.pedigree-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1px;
+  background-color: var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  font-size: 0.875rem;
+}
+
+.pedigree-cell {
+  background-color: var(--surface-color);
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pedigree-cell.generation-0 {
+  background-color: var(--primary-light);
+  color: white;
+  font-weight: 600;
+}
+
+.pedigree-cell.generation-1 {
+  background-color: var(--info-bg);
+  border-color: var(--info-color);
+}
+
+.pedigree-cell.generation-2 {
+  background-color: var(--background-color);
+}
+
+.pedigree-cell.generation-3 {
+  background-color: var(--warning-bg);
+  border-color: var(--warning-color);
+}
+
+.pedigree-cell.generation-4 {
+  background-color: var(--success-bg);
+  border-color: var(--success-color);
+}
+
+.pedigree-name {
+  font-weight: 500;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.pedigree-band {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.pedigree-cell.generation-0 .pedigree-band {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pedigree-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* 血统连接线 */
+.pedigree-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ================================
+   比赛结果组件样式
+   ================================ */
+
+.results-container {
+  padding: 20px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.results-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-table {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.results-table .table {
+  margin: 0;
+}
+
+.results-table .table th {
+  background-color: var(--background-color);
+}
+
+.result-place-1 {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.result-place-2 {
+  color: #c0c0c0;
+  font-weight: 600;
+}
+
+.result-place-3 {
+  color: #cd7f32;
+  font-weight: 600;
+}
+
+.result-percentage {
+  background-color: var(--primary-light);
+  color: white;
+  padding: 2px 6px;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* 移动端结果卡片 */
+.results-cards {
+  display: none;
+}
+
+.result-card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.result-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.result-date {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.result-place-badge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.result-card-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.result-card-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.result-card-value {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ================================
+   育种组件样式
+   ================================ */
+
+.breeding-container {
+  padding: 20px;
+}
+
+.breeding-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.breeding-item {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.breeding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.breeding-pair {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.breeding-pigeon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breeding-pigeon-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breeding-pigeon-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.breeding-pigeon-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.breeding-pigeon-band {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.breeding-date {
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.breeding-offspring {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.offspring-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.offspring-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offspring-info {
+  flex: 1;
+}
+
+.offspring-name {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.offspring-band {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.offspring-success {
+  color: var(--success-color);
+  font-size: 0.875rem;
+}
+
+/* ================================
+   亲戚关系组件样式
+   ================================ */
+
+.relatives-container {
+  padding: 20px;
+}
+
+.relatives-section {
+  margin-bottom: 32px;
+}
+
+.relatives-section h5 {
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color);
+  font-weight: 600;
+}
+
+.relatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.relative-card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.relative-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.relative-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.relative-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.relative-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.relative-name {
+  font-weight: 600;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.relative-band {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.relation-type {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--info-bg);
+  color: var(--info-color);
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.relative-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.relative-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.relative-detail-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.relative-detail-value {
+  color: var(--text-primary);
+}
+
+/* ================================
+   媒体组件样式
+   ================================ */
+
+.media-container {
+  padding: 20px;
+}
+
+.media-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.media-filter-btn {
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-base);
+  font-size: 0.875rem;
+}
+
+.media-filter-btn:hover {
+  background-color: var(--background-color);
+}
+
+.media-filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.media-item {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.media-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.media-thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background-color: var(--border-color);
+}
+
+.media-info {
+  padding: 12px;
+}
+
+.media-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.media-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.media-type-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ================================
+   用药记录组件样式
+   ================================ */
+
+.medication-container {
+  padding: 20px;
+}
+
+.medication-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.medication-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.medication-item {
+  position: relative;
+  margin-bottom: 24px;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.medication-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 3px solid var(--surface-color);
+  box-shadow: 0 0 0 2px var(--border-color);
+}
+
+.medication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.medication-name {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.medication-date {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.medication-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.medication-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.medication-detail-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.medication-detail-value {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.medication-notes {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.medication-type {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ================================
+   通用卡片组件
+   ================================ */
+
+.info-card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  margin-bottom: 16px;
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.info-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.info-card-content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ================================
+   状态指示器组件
+   ================================ */
+
+.status-indicators {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-indicator.active {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+}
+
+.status-indicator.breeder {
+  background-color: var(--info-bg);
+  color: var(--info-color);
+}
+
+.status-indicator.sold {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+}
+
+.status-indicator.lost {
+  background-color: var(--error-bg);
+  color: var(--error-color);
+}
+
+.status-indicator.dead {
+  background-color: var(--text-muted);
+  color: white;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* ================================
+   性别图标组件
+   ================================ */
+
+.sex-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.sex-icon.male {
+  background-color: var(--info-bg);
+  color: var(--info-color);
+}
+
+.sex-icon.female {
+  background-color: #ff4081;
+  color: white;
+}
+
+.sex-icon.unknown {
+  background-color: var(--background-color);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}

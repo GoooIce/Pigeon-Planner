@@ -1,0 +1,837 @@
+/* Pigeon Planner - 响应式设计样式 */
+
+/* ================================
+   基础响应式变量
+   ================================ */
+
+/* 移动优先的响应式断点 */
+@media (min-width: 576px) {
+  /* 小屏幕设备 (横屏手机) */
+}
+
+@media (min-width: 768px) {
+  /* 中等屏幕设备 (平板) */
+}
+
+@media (min-width: 992px) {
+  /* 大屏幕设备 (桌面) */
+}
+
+@media (min-width: 1200px) {
+  /* 超大屏幕设备 */
+}
+
+/* ================================
+   移动端样式 (< 768px)
+   ================================ */
+
+@media (max-width: 767.98px) {
+  /* 应用容器布局调整 */
+  .app-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* 顶部导航栏 */
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar-brand i {
+    font-size: 1rem;
+  }
+
+  /* 侧边栏 - 移动端改为全屏覆盖 */
+  .sidebar {
+    position: fixed;
+    top: 56px; /* header height */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-color: var(--surface-color);
+    z-index: 1040;
+    transition: left 0.3s ease-in-out;
+    border-right: none;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1030;
+    display: none;
+  }
+
+  .sidebar-overlay.show {
+    display: block;
+  }
+
+  /* 主内容区域 */
+  .app-body {
+    margin-top: 56px; /* header height */
+    height: calc(100vh - 56px);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  /* 鸽子详情面板 */
+  .pigeon-details {
+    padding: 16px;
+  }
+
+  .pigeon-details .row {
+    align-items: flex-start;
+  }
+
+  .pigeon-photo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pigeon-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .pigeon-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pigeon-actions .btn {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  /* 标签页导航 */
+  .tab-navigation {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .nav-tabs {
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    font-size: 0.8rem;
+    min-width: 60px;
+  }
+
+  .nav-link i {
+    display: block;
+    margin: 0 auto 4px;
+    font-size: 1rem;
+  }
+
+  .nav-link span {
+    display: none; /* 隐藏文字，只显示图标 */
+  }
+
+  /* 标签页内容 */
+  .tab-content {
+    padding: 16px;
+  }
+
+  /* 状态栏 */
+  .app-footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    padding: 8px 12px;
+    z-index: 10;
+  }
+
+  .app-footer .col-md-6 {
+    flex: 1;
+  }
+
+  .app-footer .text-md-end {
+    text-align: left;
+  }
+
+  /* 血统表响应式 */
+  .pedigree-container {
+    padding: 16px;
+  }
+
+  .pedigree-table {
+    font-size: 0.75rem;
+    border-spacing: 0;
+  }
+
+  .pedigree-cell {
+    padding: 6px 4px;
+    min-height: 50px;
+  }
+
+  .pedigree-name {
+    font-size: 0.75rem;
+  }
+
+  .pedigree-band {
+    font-size: 0.7rem;
+  }
+
+  /* 比赛结果响应式 */
+  .results-container {
+    padding: 16px;
+  }
+
+  .results-header {
+    padding: 12px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .results-stats {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .stat-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .results-table {
+    display: none; /* 隐藏表格视图 */
+  }
+
+  .results-cards {
+    display: block; /* 显示卡片视图 */
+  }
+
+  .result-card {
+    margin-bottom: 12px;
+  }
+
+  .result-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .result-card-body {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* 育种响应式 */
+  .breeding-container {
+    padding: 16px;
+  }
+
+  .breeding-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .breeding-pair {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .breeding-date {
+    text-align: left;
+  }
+
+  .breeding-offspring {
+    grid-template-columns: 1fr;
+  }
+
+  .offspring-item {
+    padding: 12px;
+  }
+
+  /* 亲戚关系响应式 */
+  .relatives-container {
+    padding: 16px;
+  }
+
+  .relatives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .relative-card {
+    padding: 12px;
+  }
+
+  .relative-details {
+    grid-template-columns: 1fr;
+  }
+
+  /* 媒体响应式 */
+  .media-container {
+    padding: 16px;
+  }
+
+  .media-filters {
+    gap: 8px;
+  }
+
+  .media-filter-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .media-thumbnail {
+    height: 120px;
+  }
+
+  .media-info {
+    padding: 8px;
+  }
+
+  /* 用药记录响应式 */
+  .medication-container {
+    padding: 16px;
+  }
+
+  .medication-timeline {
+    padding-left: 30px;
+  }
+
+  .medication-timeline::before {
+    left: 10px;
+  }
+
+  .medication-item::before {
+    left: -25px;
+  }
+
+  .medication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .medication-details {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* 搜索框 */
+  .search-box {
+    display: none;
+  }
+
+  /* 工具按钮 */
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+  }
+
+  .btn-sm {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* 表单控件 */
+  .form-control, .form-select {
+    font-size: 0.875rem;
+  }
+}
+
+/* ================================
+   平板端样式 (768px - 991px)
+   ================================ */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* 应用布局 */
+  .app-container {
+    height: 100vh;
+  }
+
+  /* 侧边栏 - 可折叠 */
+  .sidebar {
+    width: 280px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .sidebar.collapsed {
+    margin-left: -280px;
+  }
+
+  .main-content {
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .sidebar.collapsed + .main-content {
+    margin-left: 0;
+  }
+
+  /* 鸽子详情面板 */
+  .pigeon-details {
+    padding: 20px;
+  }
+
+  .pigeon-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* 标签页 */
+  .nav-link {
+    padding: 12px 16px;
+    font-size: 0.875rem;
+  }
+
+  /* 血统表 */
+  .pedigree-table {
+    font-size: 0.8rem;
+  }
+
+  .pedigree-cell {
+    padding: 8px 10px;
+  }
+
+  /* 比赛结果 */
+  .results-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .results-stats {
+    gap: 20px;
+  }
+
+  /* 媒体网格 */
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  /* 用药记录 */
+  .medication-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================
+   大屏幕优化 (> 992px)
+   ================================ */
+
+@media (min-width: 992px) {
+  /* 优化大屏幕下的布局 */
+  .app-container {
+    height: 100vh;
+  }
+
+  .sidebar {
+    width: var(--sidebar-width);
+    min-width: 280px;
+  }
+
+  .main-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* 优化鸽子列表 */
+  .pigeon-item {
+    padding: 16px;
+  }
+
+  .pigeon-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* 优化血统表 */
+  .pedigree-table {
+    font-size: 0.9rem;
+  }
+
+  .pedigree-cell {
+    padding: 12px 16px;
+    min-height: 70px;
+  }
+
+  /* 优化比赛结果 */
+  .results-stats {
+    gap: 32px;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  /* 优化媒体网格 */
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  /* 优化用药记录 */
+  .medication-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================================
+   超大屏幕优化 (> 1200px)
+   ================================ */
+
+@media (min-width: 1200px) {
+  /* 进一步优化大屏幕显示 */
+  .sidebar {
+    width: 360px;
+  }
+
+  .container-fluid {
+    max-width: 100%;
+  }
+
+  .pigeon-details {
+    padding: 32px;
+  }
+
+  .pigeon-photo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* 优化血统表显示 */
+  .pedigree-container {
+    padding: 32px;
+  }
+
+  .pedigree-table {
+    font-size: 1rem;
+  }
+
+  .pedigree-cell {
+    padding: 16px 20px;
+    min-height: 80px;
+  }
+
+  /* 优化比赛结果 */
+  .results-container {
+    padding: 32px;
+  }
+
+  .results-stats {
+    gap: 48px;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  /* 优化其他组件 */
+  .breeding-container,
+  .relatives-container,
+  .media-container,
+  .medication-container {
+    padding: 32px;
+  }
+
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* ================================
+   横屏模式优化
+   ================================ */
+
+@media (orientation: landscape) and (max-height: 600px) {
+  /* 横屏手机优化 */
+  .app-header {
+    height: 48px;
+  }
+
+  .app-body {
+    margin-top: 48px;
+    height: calc(100vh - 48px);
+  }
+
+  .navbar {
+    padding: 0.25rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .tab-navigation {
+    height: auto;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .pigeon-details {
+    padding: 12px;
+  }
+
+  .pigeon-photo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-footer {
+    height: 32px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ================================
+   高分辨率屏幕优化
+   ================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Retina屏幕优化 */
+  .pigeon-avatar img,
+  .pigeon-photo img,
+  .media-thumbnail {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ================================
+   打印样式
+   ================================ */
+
+@media print {
+  /* 隐藏不需要的元素 */
+  .app-header,
+  .sidebar,
+  .sidebar-overlay,
+  .tab-navigation,
+  .app-footer,
+  .navbar,
+  .mobile-search,
+  .pigeon-actions,
+  .btn,
+  .nav-tabs,
+  .search-box,
+  .form-control,
+  .form-select {
+    display: none !important;
+  }
+
+  /* 优化打印布局 */
+  .app-container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .app-body {
+    margin: 0;
+    height: auto;
+  }
+
+  .main-content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .content-wrapper {
+    height: auto;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .pigeon-details,
+  .tab-content {
+    padding: 20px;
+    background: white;
+    color: black;
+  }
+
+  /* 优化表格打印 */
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid #000;
+    padding: 8px;
+  }
+
+  /* 优化血统表打印 */
+  .pedigree-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .pedigree-cell {
+    border: 1px solid #000;
+    background: white;
+    color: black;
+  }
+
+  /* 分页控制 */
+  .pedigree-container,
+  .results-container,
+  .breeding-container,
+  .relatives-container,
+  .media-container,
+  .medication-container {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+}
+
+/* ================================
+   可访问性增强
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  /* 减少动画效果 */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --background-color: #ffffff;
+    --surface-color: #ffffff;
+  }
+
+  .btn,
+  .form-control,
+  .form-select {
+    border: 2px solid #000000;
+  }
+
+  .nav-link {
+    border-bottom: 2px solid #000000;
+  }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --border-color: #333333;
+    --border-light: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-muted: #666666;
+  }
+
+  .navbar {
+    background-color: var(--surface-color);
+    border-bottom-color: var(--border-color);
+  }
+
+  .sidebar {
+    background-color: var(--surface-color);
+    border-right-color: var(--border-color);
+  }
+
+  .pigeon-item:hover {
+    background-color: var(--border-light);
+  }
+
+  .pedigree-cell.generation-0 {
+    background-color: var(--primary-color);
+  }
+}
+
+/* ================================
+   触摸设备优化
+   ================================ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* 增大触摸目标 */
+  .nav-link {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  .pigeon-item {
+    min-height: 48px;
+    padding: 16px;
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  .form-control,
+  .form-select {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  /* 简化悬停效果 */
+  .pigeon-item:hover,
+  .btn:hover,
+  .nav-link:hover {
+    transform: none;
+  }
+}
