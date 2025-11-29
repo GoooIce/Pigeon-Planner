@@ -232,3 +232,78 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### Node.js / JavaScript template
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Lock files (keep package-lock.json for reproducible builds, but ignore in nested projects)
+**/package-lock.json
+
+# Build outputs
+dist/
+build/
+target/
+out/
+
+# Cache and temporary files
+.npm/
+.yarn/
+.pnpm-store/
+.nyc_output/
+.cache/
+.parcel-cache/
+.vite/
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# IDE editor files and directories
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### Rust template
+# Rust artifacts
+**/target/
+Cargo.lock
+
+# Backup files
+*~
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+
+### Tauri template
+# Tauri specific
+src-tauri/target/
