@@ -14,7 +14,10 @@ Pigeon Planner 是一个多平台赛鸽管理应用程序，包含三个主要�
 
 ### 经典版本 (Python + PyGTK)
 ```bash
-# 运行应用
+# 进入经典版本目录
+cd pigeonplanner-classic/
+
+# 运行应用 (需要Python 2.7)
 python pigeonplanner.py
 
 # 开发安装
@@ -24,7 +27,7 @@ python setup.py develop --install-dir dev
 # 系统安装
 sudo python setup.py install
 
-# 测试
+# 测试 (在pigeonplanner-classic目录下)
 make test
 nosetests-2.7 tests
 
@@ -78,24 +81,35 @@ php -S localhost:8000
 ### 整体结构
 ```
 Pigeon-Planner/
-├── pigeonplanner/           # Python 经典版本 (主代码)
+├── pigeonplanner-classic/  # Python 经典版本 (已移动到此目录)
 ├── pigeon-planner-rs/      # Rust 现代化版本
 ├── pigeonplanner-web/      # Web原型版本
-├── glade/                  # GTK 界面设计文件
-├── images/                 # 图像和图标资源
-├── po/                     # 翻译文件
-├── resultparsers/          # 比赛结果解析器插件
-├── tests/                  # 测试文件
-├── data/                   # 应用程序数据文件
-└── 配置文件 (setup.py, Makefile等)
+├── CHANGES.md              # 现代化版本变更日志
+├── CHANGES-CLASSIC.md      # 经典版本变更历史
+├── README.md               # 项目主要说明
+├── USER_GUIDE.md           # 用户使用手册
+├── QUICK_START.md          # 快速开始指南
+├── RELEASE_NOTES.md        # 发布说明
+└── 配置文件 (LICENSE, AUTHORS等)
 ```
 
 ### 经典版本架构 (Python + PyGTK)
-- **pigeonplanner/core/** - 核心配置和常量
-- **pigeonplanner/database/** - SQLite 数据库操作
-- **pigeonplanner/ui/** - GTK 界面组件
-- **pigeonplanner/export/** - 数据导出功能
-- **pigeonplanner/reports/** - 报告生成
+```
+pigeonplanner-classic/
+├── pigeonplanner/core/**     # 核心配置和常量
+├── pigeonplanner/database/** # SQLite 数据库操作
+├── pigeonplanner/ui/**       # GTK 界面组件
+├── pigeonplanner/export/**   # 数据导出功能
+├── pigeonplanner/reports/**  # 报告生成
+├── data/**                   # 应用数据文件
+├── glade/**                  # GTK界面设计文件
+├── images/**                 # 图像和图标资源
+├── po/**                     # 翻译文件
+├── resultparsers/**          # 比赛结果解析器插件
+├── tests/**                  # 测试文件
+├── mac/**                    # macOS构建脚本
+└── win/**                    # Windows构建脚本
+```
 
 ### 现代化版本架构 (Rust + Tauri + React)
 ```
@@ -144,6 +158,57 @@ pigeonplanner-web/
 - **Bootstrap 5** + **Font Awesome 6**
 - **响应式设计** + **原生组件**
 
+## 版本管理
+
+### Git Tag命名规范
+
+**格式：`{type}/{prefix}{version}`**
+
+#### 类型前缀：
+- `classic/` - 经典版本（Python + PyGTK）
+- `modern/` - 现代版本（Rust + Tauri + React）
+- `web/` - Web原型版本（HTML5 + JavaScript）
+
+#### 版本格式：
+- 正式版本：`v{major}.{minor}.{patch}`
+- 开发版本：`v{major}.{minor}.{patch}-{stage}`（alpha/beta/rc）
+
+#### 当前Tags：
+- `modern/v1.0.0` - 现代版本正式发布
+- `modern/v0.1.0-alpha` - 现代版本初始原型
+- `classic/v2.2.4` - 经典版本最后稳定版本
+
+#### 版本管理命令：
+```bash
+# 查看所有版本标签
+git tag --list --sort=-version:refname
+
+# 检出特定版本
+git checkout modern/v1.0.0
+git checkout classic/v2.2.4
+
+# 创建新版本标签
+git tag -a modern/v1.1.0 -m "Release notes..."
+
+# 推送标签到远程仓库
+git push origin --tags
+```
+
+## CI/CD和构建
+
+### GitHub Actions
+- **.github/workflows/build.yml** - 自动构建和发布工作流
+- 支持多平台构建：macOS、Windows、Linux
+- 自动触发条件：推送到master分支、tag推送、Pull Request
+
+### 自动构建
+```bash
+# 触发构建的方式
+git push origin master                    # 触发主分支构建
+git push origin modern/v1.1.0            # 触发版本发布构建
+git pull-request                         # 触发PR构建
+```
+
 ## 功能状态对比
 
 | 功能模块 | 经典版本 | 现代化版本 | Web版本 |
@@ -180,6 +245,21 @@ pigeonplanner-web/
 #### 缺失的功能表
 - **health_records** - 健康记录 (待实现)
 
+## 项目文档
+
+### 重要文档文件
+- **README.md** - 项目主要说明和快速开始指南
+- **CHANGES.md** - 现代化版本变更日志
+- **CHANGES-CLASSIC.md** - 经典版本完整变更历史
+- **USER_GUIDE.md** - 详细用户使用手册
+- **QUICK_START.md** - 5分钟快速上手指南
+- **RELEASE_NOTES.md** - 发布说明和下载信息
+
+### 版本选择指南
+- **生产环境**：使用经典版本 `classic/v2.2.4` (功能完整，稳定)
+- **开发环境**：使用现代化版本 `modern/v1.0.0` (现代技术栈，积极开发)
+- **快速体验**：使用Web版本 (浏览器访问，无需安装)
+
 ## 开发优先级
 
 ### 现代化版本开发状态
@@ -201,9 +281,12 @@ pigeonplanner-web/
 ## 配置文件
 
 ### 经典版本
-- **setup.py** - Python 构建配置
-- **Makefile** - 构建和开发命令
-- **pigeonplanner/core/const.py** - 核心常量和配置
+- **pigeonplanner-classic/setup.py** - Python 构建配置
+- **pigeonplanner-classic/Makefile** - 构建和开发命令
+- **pigeonplanner-classic/pigeonplanner/core/const.py** - 核心常量和配置
+- **pigeonplanner-classic/MANIFEST.in** - 包文件清单
+- **pigeonplanner-classic/mac/** - macOS 构建脚本
+- **pigeonplanner-classic/win/** - Windows 构建脚本
 
 ### 现代化版本
 - **package.json** - 前端依赖和脚本
@@ -238,8 +321,9 @@ pigeonplanner-web/
 
 ### 经典版本
 ```bash
-make test  # 运行所有测试
-nosetests-2.7 tests/specific_test.py  # 单个测试
+cd pigeonplanner-classic/
+make test                           # 运行所有测试
+nosetests-2.7 tests/specific_test.py # 单个测试
 ```
 
 ### 现代化版本
