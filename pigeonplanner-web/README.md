@@ -237,7 +237,7 @@ const results = DataHelpers.getResultsByPigeonId(pigeonId);
 
 ## 许可证
 
-本项目基于原 Pigeon Planner 项目，遵循相同的开源许可证。
+本项目基于原 Pigeon Planner 项目，使用 GNU General Public License v3.0 开源许可证。详见 [LICENSE](LICENSE) 文件。
 
 ## 致谢
 

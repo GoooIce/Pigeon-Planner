@@ -3,7 +3,7 @@ name = "pigeon-planner-rs"
 version = "1.0.0"
 description = "Pigeon Planner - Modern pigeon management application"
 authors = ["Pigeon Planner Team"]
-license = "MIT"
+license = "GPL-3.0"
 repository = "https://github.com/pigeonplanner/pigeon-planner-rs"
 edition = "2021"
 
