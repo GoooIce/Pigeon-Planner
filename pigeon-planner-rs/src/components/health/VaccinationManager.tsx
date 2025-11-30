@@ -63,7 +63,7 @@ export function VaccinationManager() {
                     <div>
                       <p className="font-medium">{vaccination.vaccine_name}</p>
                       <p className="text-sm text-muted-foreground">
-                        {vaccination.band_number} - {vaccination.pigeon_name || '未命名'}
+                        {vaccination.ring_number} - {vaccination.pigeon_name || '未命名'}
                       </p>
                       <p className="text-xs text-red-600">
                         过期 {Math.abs(vaccination.days_until_due)} 天
@@ -102,7 +102,7 @@ export function VaccinationManager() {
                     <div>
                       <p className="font-medium">{vaccination.vaccine_name}</p>
                       <p className="text-sm text-muted-foreground">
-                        {vaccination.band_number} - {vaccination.pigeon_name || '未命名'}
+                        {vaccination.ring_number} - {vaccination.pigeon_name || '未命名'}
                       </p>
                       <p className="text-xs text-yellow-600">
                         {vaccination.days_until_due} 天后到期
@@ -143,7 +143,7 @@ export function VaccinationManager() {
                   <SelectItem value="">所有鸽子</SelectItem>
                   {pigeons?.map((pigeon) => (
                     <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                      {pigeon.band_number} - {pigeon.name || '未命名'}
+                      {pigeon.ring_number} - {pigeon.name || '未命名'}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -321,7 +321,7 @@ function VaccinationForm({ onSuccess, onCancel }: VaccinationFormProps) {
             <SelectContent>
               {pigeons?.map((pigeon) => (
                 <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                  {pigeon.band_number} - {pigeon.name || '未命名'}
+                  {pigeon.ring_number} - {pigeon.name || '未命名'}
                 </SelectItem>
               ))}
             </SelectContent>

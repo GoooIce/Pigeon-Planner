@@ -36,7 +36,7 @@ export function HealthCheckList({ pigeonId }: HealthCheckListProps) {
     const matchesSearch = searchTerm === '' ||
       allPigeons?.some(p =>
         p.id === check.pigeon_id &&
-        (p.band_number.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (p.ring_number.toLowerCase().includes(searchTerm.toLowerCase()) ||
          (p.name && p.name.toLowerCase().includes(searchTerm.toLowerCase())))
       ) ||
       check.examiner?.toLowerCase().includes(searchTerm.toLowerCase());
@@ -220,7 +220,7 @@ export function HealthCheckList({ pigeonId }: HealthCheckListProps) {
                         </TableCell>
                         <TableCell>
                           <div>
-                            <div className="font-medium">{pigeon?.band_number}</div>
+                            <div className="font-medium">{pigeon?.ring_number}</div>
                             {pigeon?.name && (
                               <div className="text-sm text-muted-foreground">{pigeon.name}</div>
                             )}
@@ -308,7 +308,7 @@ export function HealthCheckList({ pigeonId }: HealthCheckListProps) {
                   <div className="grid gap-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">鸽子编号:</span>
-                      <span>{getPigeonInfo(selectedCheck.pigeon_id)?.band_number}</span>
+                      <span>{getPigeonInfo(selectedCheck.pigeon_id)?.ring_number}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">鸽子名称:</span>

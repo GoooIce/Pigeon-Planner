@@ -88,7 +88,7 @@ export function HealthDashboardSimple() {
               <SelectItem value="">所有鸽子</SelectItem>
               {pigeons?.map((pigeon) => (
                 <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                  {pigeon.band_number} - {pigeon.name || '未命名'}
+                  {pigeon.ring_number} - {pigeon.name || '未命名'}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -193,7 +193,7 @@ export function HealthDashboardSimple() {
               <CardHeader>
                 <CardTitle>健康检查记录</CardTitle>
                 <CardDescription>
-                  {getPigeonInfo(selectedPigeonId)?.band_number} - {getPigeonInfo(selectedPigeonId)?.name || '未命名'} 的检查记录
+                  {getPigeonInfo(selectedPigeonId)?.ring_number} - {getPigeonInfo(selectedPigeonId)?.name || '未命名'} 的检查记录
                 </CardDescription>
               </CardHeader>
               <CardContent>

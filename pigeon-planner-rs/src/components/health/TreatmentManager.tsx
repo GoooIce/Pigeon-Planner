@@ -90,7 +90,7 @@ export function TreatmentManager() {
                   <SelectItem value="">所有鸽子</SelectItem>
                   {pigeons?.map((pigeon) => (
                     <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                      {pigeon.band_number} - {pigeon.name || '未命名'}
+                      {pigeon.ring_number} - {pigeon.name || '未命名'}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -329,7 +329,7 @@ function TreatmentForm({ onSuccess, onCancel }: TreatmentFormProps) {
             <SelectContent>
               {pigeons?.map((pigeon) => (
                 <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                  {pigeon.band_number} - {pigeon.name || '未命名'}
+                  {pigeon.ring_number} - {pigeon.name || '未命名'}
                 </SelectItem>
               ))}
             </SelectContent>

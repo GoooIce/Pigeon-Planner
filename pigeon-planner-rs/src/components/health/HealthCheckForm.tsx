@@ -101,7 +101,7 @@ export function HealthCheckForm({ pigeonId, onSuccess, onCancel }: HealthCheckFo
           <Label htmlFor="pigeon">鸽子</Label>
           {pigeonId ? (
             <div className="p-3 border rounded-lg bg-gray-50">
-              <p className="font-medium">{selectedPigeonData?.band_number}</p>
+              <p className="font-medium">{selectedPigeonData?.ring_number}</p>
               <p className="text-sm text-muted-foreground">
                 {selectedPigeonData?.name || '未命名'}
               </p>
@@ -114,7 +114,7 @@ export function HealthCheckForm({ pigeonId, onSuccess, onCancel }: HealthCheckFo
               <SelectContent>
                 {pigeons?.map((pigeon) => (
                   <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                    {pigeon.band_number} - {pigeon.name || '未命名'}
+                    {pigeon.ring_number} - {pigeon.name || '未命名'}
                   </SelectItem>
                 ))}
               </SelectContent>

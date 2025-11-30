@@ -150,7 +150,7 @@ export function HealthDashboard() {
                         <div>
                           <p className="font-medium">{vaccination.vaccine_name}</p>
                           <p className="text-sm text-muted-foreground">
-                            {vaccination.band_number} - {vaccination.pigeon_name || '未命名'}
+                            {vaccination.ring_number} - {vaccination.pigeon_name || '未命名'}
                           </p>
                         </div>
                         <Badge
@@ -196,7 +196,7 @@ export function HealthDashboard() {
                         <div>
                           <p className="font-medium">{vaccination.vaccine_name}</p>
                           <p className="text-sm text-muted-foreground">
-                            {vaccination.band_number} - {vaccination.pigeon_name || '未命名'}
+                            {vaccination.ring_number} - {vaccination.pigeon_name || '未命名'}
                           </p>
                         </div>
                         <div className="text-right">

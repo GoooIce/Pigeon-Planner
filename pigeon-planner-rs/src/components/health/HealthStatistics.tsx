@@ -72,7 +72,7 @@ export function HealthStatistics() {
               <SelectItem value="">所有鸽子</SelectItem>
               {pigeons?.map((pigeon) => (
                 <SelectItem key={pigeon.id} value={pigeon.id.toString()}>
-                  {pigeon.band_number} - {pigeon.name || '未命名'}
+                  {pigeon.ring_number} - {pigeon.name || '未命名'}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -266,7 +266,7 @@ export function HealthStatistics() {
                         <TableRow key={stat.pigeon_id}>
                           <TableCell>
                             <div>
-                              <div className="font-medium">{stat.band_number}</div>
+                              <div className="font-medium">{stat.ring_number}</div>
                               <div className="text-sm text-muted-foreground">
                                 {stat.pigeon_name || '未命名'}
                               </div>
