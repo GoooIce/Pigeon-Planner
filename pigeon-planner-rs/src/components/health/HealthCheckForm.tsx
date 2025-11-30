@@ -11,7 +11,7 @@ import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { useCreateHealthCheck, HealthCheckInput } from '@/hooks/useHealth';
 import { usePigeons } from '@/hooks/usePigeons';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 interface HealthCheckFormProps {
   pigeonId?: number;
@@ -43,7 +43,7 @@ export function HealthCheckForm({ pigeonId, onSuccess, onCancel }: HealthCheckFo
   const [selectedPigeon, setSelectedPigeon] = useState<string>('');
   const { data: pigeons } = usePigeons();
   const createHealthCheck = useCreateHealthCheck();
-  const { toast } = useToast();
+  // 使用sonner toast
 
   useEffect(() => {
     if (pigeonId && pigeons) {

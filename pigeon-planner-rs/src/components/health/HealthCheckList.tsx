@@ -12,7 +12,7 @@ import { format } from 'date-fns';
 import { Search, Filter, Calendar, User, Activity, Edit, Trash2, Eye } from 'lucide-react';
 import { useHealthChecks, useDeleteHealthCheck, getHealthConditionColor } from '@/hooks/useHealth';
 import { usePigeons } from '@/hooks/usePigeons';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 interface HealthCheckListProps {
   pigeonId?: number;
@@ -30,7 +30,7 @@ export function HealthCheckList({ pigeonId }: HealthCheckListProps) {
   });
   const { data: allPigeons } = usePigeons();
   const deleteHealthCheck = useDeleteHealthCheck();
-  const { toast } = useToast();
+  // 使用sonner toast
 
   const filteredChecks = healthChecks?.filter(check => {
     const matchesSearch = searchTerm === '' ||

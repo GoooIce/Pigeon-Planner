@@ -13,7 +13,7 @@ import { Plus, Pill, Calendar, AlertTriangle, CheckCircle, Clock, XCircle } from
 import { format } from 'date-fns';
 import { useTreatments, useCreateTreatment, getTreatmentStatusColor, useDiseaseTypes, useMedicationTypes } from '@/hooks/useHealth';
 import { usePigeons } from '@/hooks/usePigeons';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 export function TreatmentManager() {
   const [showAddForm, setShowAddForm] = useState(false);
@@ -33,7 +33,7 @@ export function TreatmentManager() {
   const { data: medicationTypes } = useMedicationTypes();
   const { data: pigeons } = usePigeons();
   const createTreatment = useCreateTreatment();
-  const { toast } = useToast();
+  // 使用sonner toast
 
   const currentTreatments = activeTab === 'ongoing' ? ongoingTreatments :
                            activeTab === 'completed' ? completedTreatments :

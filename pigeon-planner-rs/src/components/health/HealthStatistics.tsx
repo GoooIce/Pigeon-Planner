@@ -10,7 +10,7 @@ import { BarChart3, TrendingUp, Activity, Calendar, Filter, Download } from 'luc
 import { format } from 'date-fns';
 import { useHealthStatistics, useHealthSummary } from '@/hooks/useHealth';
 import { usePigeons } from '@/hooks/usePigeons';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 export function HealthStatistics() {
   const [selectedPigeonId, setSelectedPigeonId] = useState<number | null>(null);
@@ -19,7 +19,7 @@ export function HealthStatistics() {
   const { data: healthSummary } = useHealthSummary();
   const { data: healthStatistics } = useHealthStatistics();
   const { data: pigeons } = usePigeons();
-  const { toast } = useToast();
+  // 使用sonner toast
 
   const filteredStatistics = selectedPigeonId
     ? healthStatistics?.filter(stat => stat.pigeon_id === selectedPigeonId)

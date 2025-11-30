@@ -15,7 +15,7 @@ import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { useVaccinations, useCreateVaccination, useVaccinationSchedule, getVaccinationStatusColor, useVaccineTypes } from '@/hooks/useHealth';
 import { usePigeons } from '@/hooks/usePigeons';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 export function VaccinationManager() {
   const [showAddForm, setShowAddForm] = useState(false);
@@ -28,7 +28,7 @@ export function VaccinationManager() {
   const { data: vaccineTypes } = useVaccineTypes();
   const { data: pigeons } = usePigeons();
   const createVaccination = useCreateVaccination();
-  const { toast } = useToast();
+  // 使用sonner toast
 
   const overdueVaccinations = vaccinationSchedule?.filter(v => v.status === 'overdue') || [];
   const dueSoonVaccinations = vaccinationSchedule?.filter(v => v.status === 'due_soon') || [];

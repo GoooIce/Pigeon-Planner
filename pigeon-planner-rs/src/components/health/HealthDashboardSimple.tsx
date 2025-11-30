@@ -21,7 +21,7 @@ import {
   SimpleHealthSummary
 } from '@/hooks/useHealthSimple';
 import { usePigeons } from '@/hooks/usePigeons';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 export function HealthDashboardSimple() {
   const [selectedPigeonId, setSelectedPigeonId] = useState<number | null>(null);
@@ -35,7 +35,7 @@ export function HealthDashboardSimple() {
   const { data: pigeons } = usePigeons();
   const createHealthCheck = useCreateSimpleHealthCheck();
   const deleteHealthCheck = useDeleteSimpleHealthCheck();
-  const { toast } = useToast();
+  // 使用sonner toast
 
   const handleDelete = async (id: number) => {
     if (window.confirm('确定要删除这条健康检查记录吗？')) {
