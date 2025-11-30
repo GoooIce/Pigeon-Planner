@@ -86,6 +86,30 @@ async fn main() {
             commands::race::get_all_race_statistics,
             commands::race::get_pigeon_race_history,
             commands::race::search_races,
+
+            // Health management commands (complete version - Phase 1: Core Health Check)
+            commands::health::create_health_check,
+            commands::health::get_health_checks,
+            commands::health::get_health_check_by_id,
+            commands::health::update_health_check,
+            commands::health::delete_health_check,
+
+            // Health management commands (Phase 2: Vaccination Management)
+            commands::health::create_vaccination,
+            commands::health::get_vaccinations,
+            commands::health::get_vaccination_schedule,
+            commands::health::get_vaccine_types,
+
+            // Health management commands (Phase 3: Treatment Management)
+            commands::health::create_treatment,
+            commands::health::get_treatments,
+            commands::health::get_treatment_history,
+            commands::health::get_disease_types,
+            commands::health::get_medication_types,
+
+            // Health management commands (Phase 4: Statistics and Summary)
+            commands::health::get_health_statistics,
+            commands::health::get_health_summary,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

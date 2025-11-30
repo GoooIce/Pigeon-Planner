@@ -4,6 +4,7 @@ import { Layout } from './components/layout/Layout'
 import PigeonList from './components/pigeons/PigeonList'
 import { BreedingManager } from './components/breeding/BreedingManager'
 import { RaceManager } from './components/races/RaceManager'
+import { HealthDashboard } from './components/health/HealthDashboard'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Home, Users, GitBranch, Trophy, Heart, Calculator, Book, Settings, Database } from 'lucide-react'
@@ -140,16 +141,7 @@ function ResultsPage() {
 }
 
 function HealthPage() {
-  return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">健康管理</h1>
-      <Card>
-        <CardContent className="pt-6">
-          <p className="text-center text-gray-500">健康管理功能开发中...</p>
-        </CardContent>
-      </Card>
-    </div>
-  )
+  return <HealthDashboard />
 }
 
 function CalculatorPage() {
