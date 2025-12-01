@@ -15,7 +15,7 @@ Pigeon Planner 是一个多平台赛鸽管理应用程序，包含三个主要�
 ### 经典版本 (Python + PyGTK)
 ```bash
 # 进入经典版本目录
-cd pigeonplanner-classic/
+cd archive/pigeonplanner-classic/
 
 # 运行应用 (需要Python 2.7)
 python pigeonplanner.py
@@ -43,7 +43,7 @@ make release
 
 ### 现代化版本 (Rust + Tauri + React)
 ```bash
-cd pigeon-planner-rs
+# 现代化版本现在是根目录，无需切换目录
 
 # 环境设置
 npm install
@@ -68,7 +68,7 @@ sqlx migrate run          # 运行迁移
 
 ### Web原型版本 (HTML5 + JavaScript)
 ```bash
-cd pigeonplanner-web
+cd archive/pigeonplanner-web
 
 # 启动本地服务器
 python -m http.server 8000
@@ -81,9 +81,16 @@ php -S localhost:8000
 ### 整体结构
 ```
 Pigeon-Planner/
-├── pigeonplanner-classic/  # Python 经典版本 (已移动到此目录)
-├── pigeon-planner-rs/      # Rust 现代化版本
-├── pigeonplanner-web/      # Web原型版本
+├── archive/                # 归档目录
+│   ├── pigeonplanner-classic/  # Python 经典版本
+│   └── pigeonplanner-web/      # Web原型版本
+├── src/                    # React 前端 (现代化版本)
+├── src-tauri/              # Rust 后端 (现代化版本)
+├── assets/                 # 静态资源
+├── docs/                   # 文档目录
+├── tests/                  # 测试文件
+├── package.json            # 前端依赖配置
+├── Cargo.toml              # Rust 依赖配置
 ├── CHANGES.md              # 现代化版本变更日志
 ├── CHANGES-CLASSIC.md      # 经典版本变更历史
 ├── README.md               # 项目主要说明
@@ -95,7 +102,7 @@ Pigeon-Planner/
 
 ### 经典版本架构 (Python + PyGTK)
 ```
-pigeonplanner-classic/
+archive/pigeonplanner-classic/
 ├── pigeonplanner/core/**     # 核心配置和常量
 ├── pigeonplanner/database/** # SQLite 数据库操作
 ├── pigeonplanner/ui/**       # GTK 界面组件
@@ -113,7 +120,7 @@ pigeonplanner-classic/
 
 ### 现代化版本架构 (Rust + Tauri + React)
 ```
-pigeon-planner-rs/
+Pigeon-Planner/            # 根目录 (现代化版本)
 ├── src/                    # React 前端
 │   ├── components/         # UI 组件
 │   ├── lib/               # 工具函数
@@ -126,12 +133,16 @@ pigeon-planner-rs/
 │   │   ├── database/      # SQLx 数据库层
 │   │   └── services/      # 业务逻辑
 │   └── migrations/        # 数据库迁移
+├── assets/                 # 静态资源
+├── tests/                  # 测试文件
+├── docs/                   # 文档
+├── package.json            # 前端依赖
 └── Cargo.toml             # Rust 依赖
 ```
 
 ### Web原型架构 (HTML5 + JavaScript)
 ```
-pigeonplanner-web/
+archive/pigeonplanner-web/
 ├── index.html             # 主页面
 ├── css/                   # 样式文件
 ├── js/                    # 原生JavaScript组件

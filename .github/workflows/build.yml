@@ -66,13 +66,22 @@ jobs:
         node-version: '20'
         cache: 'npm'
         cache-dependency-path: |
-          pigeon-planner-rs/package-lock.json
-          pigeon-planner-rs/package.json
+          package-lock.json
+          package.json
+
+    - name: Setup Rust environment
+      run: |
+        # Set environment variables to avoid rustup cross-device link errors in Docker
+        # This helps when testing with act locally
+        export RUSTUP_HOME="${RUSTUP_HOME:-$HOME/.rustup}"
+        export CARGO_HOME="${CARGO_HOME:-$HOME/.cargo}"
+        echo "RUSTUP_HOME=$RUSTUP_HOME" >> $GITHUB_ENV
+        echo "CARGO_HOME=$CARGO_HOME" >> $GITHUB_ENV
+        # Create directories if they don't exist
+        mkdir -p "$RUSTUP_HOME" "$CARGO_HOME"
 
     - name: Setup Rust
       uses: dtolnay/rust-toolchain@stable
-      with:
-        targets: x86_64-unknown-linux-gnu
 
     - name: Cache Rust dependencies
       uses: actions/cache@v4
@@ -80,8 +89,8 @@ jobs:
         path: |
           ~/.cargo/registry
           ~/.cargo/git
-          ${{ github.workspace }}/pigeon-planner-rs/target
-        key: ${{ runner.os }}-self-hosted-cargo-${{ hashFiles('pigeon-planner-rs/Cargo.toml') }}
+          ${{ github.workspace }}/target
+        key: ${{ runner.os }}-self-hosted-cargo-${{ hashFiles('Cargo.toml') }}
         restore-keys: |
           ${{ runner.os }}-self-hosted-cargo-
 
@@ -121,7 +130,7 @@ jobs:
         fi
 
     - name: Install dependencies
-      working-directory: ./pigeon-planner-rs
+      working-directory: .
       run: |
         echo "📦 Installing dependencies..."
         
@@ -138,7 +147,7 @@ jobs:
         npm install
 
     - name: TypeScript check
-      working-directory: ./pigeon-planner-rs
+      working-directory: .
       run: |
         echo "🔍 Running TypeScript type check..."
         npx tsc --noEmit --pretty || {
@@ -147,7 +156,7 @@ jobs:
         }
 
     - name: Lint check
-      working-directory: ./pigeon-planner-rs
+      working-directory: .
       run: |
         echo "🔍 Running linter..."
         npm run lint || {
@@ -155,20 +164,20 @@ jobs:
         }
 
     - name: Build frontend
-      working-directory: ./pigeon-planner-rs
+      working-directory: .
       run: |
         echo "🏗️ Building frontend..."
         npm run build
         echo "✅ Frontend build completed"
 
     - name: Build app
-      working-directory: ./pigeon-planner-rs
+      working-directory: .
       run: |
         echo "🐧 Building Linux version..."
-        npm run tauri build --target x86_64-unknown-linux-gnu
+        npm run tauri build
 
     - name: Verify build artifacts
-      working-directory: ./pigeon-planner-rs
+      working-directory: .
       run: |
         echo "🔍 Verifying build artifacts..."
         ls -la target/release/bundle/deb/ || echo "⚠️ DEB directory not found"
@@ -179,5 +188,5 @@ jobs:
       with:
         name: linux-builds
         path: |
-          pigeon-planner-rs/target/release/bundle/deb/
-          pigeon-planner-rs/target/release/bundle/appimage/
+          target/release/bundle/deb/
+          target/release/bundle/appimage/
